@@ -1,0 +1,6 @@
+.venv
+logs/
+**/__pycache__/
+.idea/misc.xml
+.idea/workspace.xml
+
