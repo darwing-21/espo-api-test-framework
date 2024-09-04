@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/business/hooks/team/setup_teardown.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/team/list-schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/team/list-select-schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/teams/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/tools/assertion_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/assertions/general_assertion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/assertions/schema_assertion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/assertions/status_code_assertion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flake8" beforeDir="false" afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussines/endpoints/endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/endpoints/endpoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussines/endpoints/endpoint_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/endpoints/endpoint_team.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussines/services/authentification.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/authentification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussines/services/team_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/team_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/schemas/team/list-schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/business/schemas/team/list_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/schemas/team/list-select-schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/business/schemas/team/list_select_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tools/load_file_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tools/load_file_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/teams/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/teams/test_get_teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_get_teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -5,16 +5,17 @@ from pathlib import Path
 BASE = Path(__file__).absolute().parent.parent.parent
 
 
-def resources_schemas_path(path):
-    return BASE / "config" / "schemas" / path
+def resources_schemas_path(category, path):
+    return BASE / "business" / "schemas" / category / path
 
 
-def load_schema_resource(filename):
+def load_schema_resource(category, filename):
     try:
-        with resources_schemas_path(filename).open() as f:
+        schema_path = resources_schemas_path(category, filename)
+        with schema_path.open() as f:
             return json.load(f)
     except FileNotFoundError:
-        raise FileNotFoundError(f"Schema file '{filename}' not found")
+        raise FileNotFoundError(f"Schema file '{filename}' not found in category '{category}'")
 
 
 def resources_credential_path(path):
