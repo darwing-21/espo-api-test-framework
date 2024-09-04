@@ -14,7 +14,6 @@ def setup_logger(name, log_file='logs/combined.log', level=logging.INFO):
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
 
-        # Console Handler
         console_handler = logging.StreamHandler()
         console_handler.setFormatter(formatter)
         logger.addHandler(console_handler)

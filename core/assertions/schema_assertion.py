@@ -8,8 +8,9 @@ logger = setup_logger('schema_assertion')
 
 
 class SchemaAssertion:
+
     @staticmethod
-    def validate_json_schema(response, category, schema_file):
+    def _load_and_validate_schema(response_json, category, schema_file):
         try:
             schema = load_schema_resource(category, schema_file)
             logger.info(f"Loaded schema: {schema_file}")
@@ -21,8 +22,8 @@ class SchemaAssertion:
             pytest.fail(f"Failed to decode JSON schema: {err}", pytrace=False)
 
         try:
-            validate(instance=response, schema=schema)
-            logger.info("JSON schema validation passed.")
+            validate(instance=response_json, schema=schema)
+            logger.info(f"JSON schema validation for '{schema_file}' passed.")
             return True
         except jsonschema_exceptions.ValidationError as err:
             logger.error(f"JSON schema validation failed: {err.message}\n"
@@ -34,11 +35,27 @@ class SchemaAssertion:
             pytest.fail(f"Invalid JSON schema: {err.message}", pytrace=False)
 
     @staticmethod
-    def assert_list_team_schema_file(response):
+    def _validate_response_json(response, schema_file, category):
         try:
             response_json = response.json()
-            logger.info(f"Validating response JSON against 'list_select_schema.json'")
+            logger.info(f"Validating response JSON against '{schema_file}'")
         except json.JSONDecodeError as err:
             logger.error(f"Failed to decode response JSON: {err}")
             pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
-        return SchemaAssertion.validate_json_schema(response_json, "team", "list_select_schema.json")
+        return SchemaAssertion._load_and_validate_schema(response_json, category, schema_file)
+
+    @staticmethod
+    def assert_list_team_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "list_schema.json", "team")
+
+    @staticmethod
+    def assert_list_select_team_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "list_select_schema.json", "team")
+
+    @staticmethod
+    def assert_create_team_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "create_team_schema.json", "team")
+
+    @staticmethod
+    def assert_team_general_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "team_general_schema.json", "team")

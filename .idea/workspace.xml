@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/business/schemas/team/create_team_schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/schemas/team/team_general_schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/endpoints/endpoint_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/endpoints/endpoint_team.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/hooks/team/setup_teardown.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/hooks/team/setup_teardown.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/services/authentification.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/authentification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/services/team_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/team_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/team.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/api/api_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/api/api_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/assertions/schema_assertion.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/assertions/schema_assertion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tools/my_logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tools/my_logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/teams/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/teams/test_get_teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_get_teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_login.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Python tests.Python tests in test_get_teams.py.executor": "Run",
-    "Python tests.pytest in bin.executor": "Run",
-    "Python tests.pytest in test.executor": "Run",
-    "Python.endpoint_team.executor": "Run",
-    "Python.pruebas.executor": "Run",
-    "Python.setup_teardown.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Darwin/Diplomado/Modulo 7/espo-api-test-framework/test"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests in test_get_teams.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in bin.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.endpoint_team.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pruebas.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setup_teardown.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Darwin/Diplomado/Modulo 7/espo-api-test-framework/test&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python tests.pytest in bin">
     <configuration name="endpoint_team" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="espo-api-test-framework" />
@@ -188,5 +185,16 @@
       <updated>1724380836863</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

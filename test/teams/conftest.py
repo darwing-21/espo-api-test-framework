@@ -8,7 +8,7 @@ def setup_list_team():
     team1 = before_create_team(generate_team_data())
     team2 = before_create_team(generate_team_data())
     team3 = before_create_team(generate_team_data())
-    yield team1, team2, team3
+    yield team1.json(), team2.json(), team3.json()
     after_delete_team(team1.json()['id'])
     after_delete_team(team2.json()['id'])
     after_delete_team(team3.json()['id'])

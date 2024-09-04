@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "rolesIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "positionList": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "layoutSetId": {
+      "type": "string"
+    },
+    "workingTimeCalendarId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
