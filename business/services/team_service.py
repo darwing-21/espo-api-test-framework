@@ -1,6 +1,6 @@
 from core.api.api_request import ApiManager
 from core.tools.my_logger import setup_logger
-from bussines.services.authentification import Auth
+from business.services.authentification import Auth
 
 
 logger = setup_logger('team_service')

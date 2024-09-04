@@ -5,29 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/espo-api-test-framework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bussines/endpoints/endpoint.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bussines/endpoints/endpoint_team.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bussines/services/authentification.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bussines/services/team_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/credentials.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/api/api_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/api/auth_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/api_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/tools/load_file_json.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/tools/my_logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/teams/test_get_teams.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/hooks/team/setup_teardown.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/schemas/team/list-schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/schemas/team/list-select-schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/teams/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flake8" beforeDir="false" afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussines/endpoints/endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/endpoints/endpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussines/endpoints/endpoint_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/endpoints/endpoint_team.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussines/services/authentification.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/authentification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussines/services/team_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/team_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/teams/test_get_teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_get_teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +50,7 @@
     &quot;Python.endpoint_team.executor&quot;: &quot;Run&quot;,
     &quot;Python.pruebas.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Darwin/Diplomado/Modulo 7/espo-api-test-framework/test&quot;
   }
 }</component>

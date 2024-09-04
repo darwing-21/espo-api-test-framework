@@ -1,6 +1,6 @@
 from urllib.parse import urlencode
 
-from bussines.endpoints.endpoint import Endpoint
+from business.endpoints.endpoint import Endpoint
 
 
 class EndpointTeams:

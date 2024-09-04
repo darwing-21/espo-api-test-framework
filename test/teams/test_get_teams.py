@@ -1,5 +1,5 @@
-from bussines.services.team_service import TeamService
-from bussines.endpoints.endpoint_team import EndpointTeams
+from business.services.team_service import TeamService
+from business.endpoints.endpoint_team import EndpointTeams
 
 
 def test_get_default():
