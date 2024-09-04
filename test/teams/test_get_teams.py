@@ -3,7 +3,8 @@ from business.endpoints.endpoint_team import EndpointTeams
 from business.tools.assertion_manager import AssertionManager
 
 
-def test_get_default():
+def test_get_default(setup_list_team):
+    team1, team2, team3 = setup_list_team
     url = EndpointTeams.get_list_team()
     response = TeamService.get_list_team(url, )
     AssertionManager.assert_status_code_200(response)

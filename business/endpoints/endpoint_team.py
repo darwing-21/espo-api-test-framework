@@ -1,9 +1,12 @@
 from urllib.parse import urlencode
-
 from business.endpoints.endpoint import Endpoint
 
 
 class EndpointTeams:
+    @classmethod
+    def get_base_team(cls):
+        return Endpoint.BASE_TEAM.value
+
     @staticmethod
     def get_default_params():
         return {
@@ -21,3 +24,7 @@ class EndpointTeams:
         params = {k: v for k, v in params.items() if v is not None}
         query_string = urlencode(params)
         return f"{Endpoint.BASE_TEAM.value}?{query_string}"
+
+    @classmethod
+    def get_team_id(cls, id_team):
+        return f"{Endpoint.BASE_TEAM.value}/{id_team}"

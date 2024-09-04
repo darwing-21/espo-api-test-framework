@@ -17,7 +17,7 @@ class Auth:
         logger.info("Loading credential configuration from 'credentials.json'.")
         try:
             return load_credential_config("credentials.json")
-        except FileNotFoundError as e:
+        except FileNotFoundError:
             logger.error("Credentials file not found: 'credentials.json'", exc_info=True)
             raise
         except Exception as e:
@@ -33,7 +33,7 @@ class Auth:
             logger.debug(f"User details found: {user}")
         return user
 
-    def build_headers(self, user_type):
+    def build_headers(self, user_type, additional_headers=None):
         logger.info(f"Building headers for user type: '{user_type}'")
         user = self.get_user(user_type)
         if not user:
@@ -43,7 +43,7 @@ class Auth:
         username = user.get("username")
         password = user.get("password")
 
-        headers = self.header_builder(username, password)
+        headers = self.header_builder(username, password, additional_params=additional_headers)
         logger.info(f"Headers successfully built for user type: '{user_type}'")
         logger.debug(f"Headers: {headers}")
         return headers
