@@ -1,3 +1,3 @@
 # config.py
-BASE_URI = "https://espo.spartan-soft.com/api/v1"
-X_Api_Key = "6261c4ee6da64179c19cb9afb61ebbc5"
+BASE_URI = "https://unitest.espocloud.com/api/v1"
+X_Api_Key = "4c29fe9482f3bccb7ac0a7d04015a2e7"

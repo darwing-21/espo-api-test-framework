@@ -6,9 +6,9 @@ fake = Faker()
 
 
 def generate_team_data():
-    roles_ids = ["66a152cf3fd086e50"]
-    layout_set_id = "66b14460b5fe67541"
-    working_time_calendar_id = "66b2300c28bb5bbba"
+    roles_ids = ["52bd3ee937361", "52bc41359084d"]
+    layout_set_id = "66d8f8ff4f1c23bca"
+    working_time_calendar_id = "66d8f90b424428d1b"
     team_name = f"Team test {fake.word()}"
     positions = random.sample(["Scrum Master", "Dev", "Qa", "Designer", "Product Owner"],
                               k=3)
