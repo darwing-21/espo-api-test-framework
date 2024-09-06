@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/business/schemas/team/add_users_to_team_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/team/remove_user_from_team_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/team/update_team_schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/schemas/team/list_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/business/schemas/team/list_schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assertions/schema_assertion.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/assertions/schema_assertion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/team.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/team.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/assertions/general_assertion.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/assertions/general_assertion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/assertions/status_code_assertion.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/assertions/status_code_assertion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/teams/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/teams/test_get_teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_get_teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

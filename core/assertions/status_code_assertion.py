@@ -17,3 +17,39 @@ class StatusCodeAssertion:
         except AssertionError as e:
             logger.error(f"Assertion failed: {e}")
             raise
+
+    @staticmethod
+    def assert_status_code_403(response):
+        logger.info(f"Validating status code 403 for response with URL: {response.url}")
+        try:
+            assert response.status_code == 403, (
+                f"Expected status code 403, but got {response.status_code}. Response text: {response.text}"
+            )
+            logger.info("Status code 403 validated successfully.")
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise
+
+    @staticmethod
+    def assert_status_code_400(response):
+        logger.info(f"Validating status code 400 for response with URL: {response.url}")
+        try:
+            assert response.status_code == 400, (
+                f"Expected status code 400, but got {response.status_code}. Response text: {response.text}"
+            )
+            logger.info("Status code 400 validated successfully.")
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise
+
+    @staticmethod
+    def assert_status_code_401(response):
+        logger.info(f"Validating status code 401 for response with URL: {response.url}")
+        try:
+            assert response.status_code == 401, (
+                f"Expected status code 401, but got {response.status_code}. Response text: {response.text}"
+            )
+            logger.info("Status code 401 validated successfully.")
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise
