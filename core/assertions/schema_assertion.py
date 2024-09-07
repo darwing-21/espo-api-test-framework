@@ -45,6 +45,18 @@ class SchemaAssertion:
         return SchemaAssertion._load_and_validate_schema(response_json, category, schema_file)
 
     @staticmethod
+    def _validate_payload_json(payload, schema_file, category):
+        if isinstance(payload, str):
+            try:
+                payload = json.loads(payload)
+                logger.info(f"Converted string payload to JSON object for validation.")
+            except json.JSONDecodeError as err:
+                logger.error(f"Failed to decode string payload JSON: {err}")
+                pytest.fail(f"Failed to decode string payload JSON: {err}", pytrace=False)
+
+        return SchemaAssertion._load_and_validate_schema(payload, category, schema_file)
+
+    @staticmethod
     def assert_list_team_schema_file(response):
         return SchemaAssertion._validate_response_json(response, "list_schema.json", "team")
 
@@ -53,8 +65,8 @@ class SchemaAssertion:
         return SchemaAssertion._validate_response_json(response, "list_select_schema.json", "team")
 
     @staticmethod
-    def assert_create_team_schema_file(response):
-        return SchemaAssertion._validate_response_json(response, "create_team_schema.json", "team")
+    def assert_create_team_schema_file(data):
+        return SchemaAssertion._validate_payload_json(data, "create_team_schema.json", "team")
 
     @staticmethod
     def assert_team_general_schema_file(response):

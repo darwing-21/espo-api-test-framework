@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "positionList": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "modifiedAt": {
+      "type": "string"
+    },
+    "rolesIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rolesNames": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "layoutSetId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "layoutSetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workingTimeCalendarId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workingTimeCalendarName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "deleted",
+    "createdAt",
+    "modifiedAt",
+    "rolesIds",
+    "rolesNames"
+  ]
+}

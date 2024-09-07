@@ -106,3 +106,51 @@ class ContentAssertion:
         except KeyError as err:
             logger.error(f"Field '{field}' not found in some items: {err}")
             pytest.fail(f"Field '{field}' not found in some items: {err}", pytrace=False)
+
+    @staticmethod
+    def assert_field_value(response, field, expected_value):
+        try:
+            response_json = response.json()
+            actual_value = response_json.get(field)
+            logger.info(f"Validating field '{field}'. Expected: '{expected_value}', Found: '{actual_value}'.")
+            assert actual_value == expected_value, f"Expected '{field}' to be '{expected_value}', but got '{actual_value}'."
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+
+    @staticmethod
+    def assert_response_text_empty(response):
+        try:
+            response_text = response.text
+            logger.info("Validating that the response text is empty.")
+            assert response_text == "", f"Expected response text to be empty, but got '{response_text}'."
+        except Exception as err:
+            logger.error(f"Failed to validate response text: {err}")
+            pytest.fail(f"Failed to validate response text: {err}", pytrace=False)
+
+    @staticmethod
+    def assert_list_field_contains(response, field, expected_items):
+        try:
+            response_json = response.json()
+            actual_list = response_json.get(field, [])
+            logger.info(
+                f"Validating list field '{field}' contains expected items: {expected_items}. Found: {actual_list}.")
+            for item in expected_items:
+                assert item in actual_list, f"Expected '{field}' to contain item '{item}', but it was not found in {actual_list}."
+            unexpected_items = [item for item in actual_list if item not in expected_items]
+            assert not unexpected_items, f"Found unexpected items in '{field}': {unexpected_items}. Expected only {expected_items}."
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+
+    @staticmethod
+    def assert_field_is_null(response, field):
+        try:
+            response_json = response.json()
+            actual_value = response_json.get(field)
+
+            logger.info(f"Validating field '{field}' is null. Found: '{actual_value}'.")
+            assert actual_value is None, f"Expected '{field}' to be null, but got '{actual_value}'."
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)

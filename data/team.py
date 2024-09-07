@@ -21,3 +21,18 @@ def generate_team_data():
     }
 
     return json.dumps(team_data)
+
+
+def create_team_data(roles_ids=None, layout_set_id=None, working_time_calendar_id=None,
+                     name=None, positions=None):
+    team_data = {
+        "name": name,
+        "rolesIds": roles_ids,
+        "positionList": positions,
+        "layoutSetId": layout_set_id,
+        "workingTimeCalendarId": working_time_calendar_id
+    }
+
+    team_data = {key: value for key, value in team_data.items() if value is not None}
+
+    return json.dumps(team_data)
