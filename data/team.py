@@ -37,7 +37,7 @@ def create_team_data(roles_ids=None, layout_set_id=None, working_time_calendar_i
     return json.dumps(team_data)
 
 
-def add_user_team_data(users_ids):
+def add_user_team_data(users_ids=None):
     users_id_data = {
         "ids": users_ids
     }
