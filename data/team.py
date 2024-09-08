@@ -35,3 +35,10 @@ def create_team_data(roles_ids=None, layout_set_id=None, working_time_calendar_i
     team_data = {key: value for key, value in team_data.items() if value is not None}
     team_data = {key: (None if value == "null" else value) for key, value in team_data.items()}
     return json.dumps(team_data)
+
+
+def add_user_team_data(users_ids):
+    users_id_data = {
+        "ids": users_ids
+    }
+    return json.dumps(users_id_data)

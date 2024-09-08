@@ -52,7 +52,7 @@ class TeamService:
         return response
 
     @staticmethod
-    def view_users_team(url, user_type="valid_user"):
+    def get_list_users_team(url, user_type="valid_user"):
         logger.info("Starting the process to get the users of the team.")
         headers = Auth().build_headers(user_type)
         logger.debug(f"Preparing headers for the request: {headers}")

@@ -16,4 +16,11 @@ def after_delete_team(id_team):
     logger.info("Setting up for delete a team.")
     url = EndpointTeams().get_team_id(id_team)
     response = TeamService.delete_team(url)
+    return
+
+
+def before_add_user(id_team, data):
+    logger.info("Setting up for add users a team.")
+    url = EndpointTeams().get_team_user(id_team)
+    response = TeamService.add_users_team(url, data)
     return response

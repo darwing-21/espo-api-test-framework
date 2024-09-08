@@ -45,7 +45,7 @@ class EndpointTeams:
         }
 
     @classmethod
-    def get_team_users(cls, team_id, **kwargs):
+    def get_list_users_team(cls, team_id, **kwargs):
         default_params = cls.get_default_user_params()
         params = {key: kwargs.get(key, default_params[key]) for key in default_params}
         params = {k: v for k, v in params.items() if v is not None}

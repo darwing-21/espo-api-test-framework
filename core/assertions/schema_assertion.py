@@ -78,8 +78,12 @@ class SchemaAssertion:
 
     @staticmethod
     def assert_add_users_to_team_schema_file(response):
-        return SchemaAssertion._validate_response_json(response, "add_users_to_team_schema.json", "team")
+        return SchemaAssertion._validate_payload_json(response, "add_users_to_team_schema.json", "team")
 
     @staticmethod
     def assert_remove_user_from_team_schema_file(response):
-        return SchemaAssertion._validate_response_json(response, "remove_user_from_team_schema.json", "team")
+        return SchemaAssertion._validate_payload_json(response, "remove_user_from_team_schema.json", "team")
+
+    @staticmethod
+    def assert_team_users_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "team_users_schema.json", "team")

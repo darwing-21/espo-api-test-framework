@@ -148,7 +148,6 @@ class ContentAssertion:
         try:
             response_json = response.json()
             actual_value = response_json.get(field)
-
             logger.info(f"Validating field '{field}' is null. Found: '{actual_value}'.")
             assert actual_value is None, f"Expected '{field}' to be null, but got '{actual_value}'."
         except ValueError as err:
@@ -160,7 +159,6 @@ class ContentAssertion:
         try:
             response_json = response.json()
             actual_value = response_json.get(field)
-
             logger.info(f"Validating field '{field}' is an empty list. Found: '{actual_value}'.")
             assert isinstance(actual_value,
                               list), f"Expected '{field}' to be a list, but got {type(actual_value).__name__}."
@@ -175,6 +173,40 @@ class ContentAssertion:
             response_json = response.json()
             logger.info(f"Validating that the response is true. Found: '{response_json}'.")
             assert response_json is True, f"Expected response to be true, but got '{response_json}'."
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise
+
+    @staticmethod
+    def assert_field_value_in_response(response, field, expected_value):
+        try:
+            response_json = response.json()
+            items_list = response_json.get('list', [])
+            logger.info(
+                f"Validating that the value '{expected_value}' is present in the field '{field}' of the response list.")
+            field_values = [item.get(field) for item in items_list]
+            assert expected_value in field_values, f"Expected value '{expected_value}' not found in field '{field}' of the response list."
+            logger.info(f"Value '{expected_value}' successfully validated in the field '{field}' of the response list.")
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise
+
+    @staticmethod
+    def assert_all_field_values_true(response, field):
+        try:
+            response_json = response.json()
+            items_list = response_json.get('list', [])
+            logger.info(f"Validating that the field '{field}' is true for all items in the response list.")
+            for index, item in enumerate(items_list):
+                actual_value = item.get(field)
+                assert actual_value is True, f"Expected '{field}' to be true, but got '{actual_value}' for item at index {index}."
+            logger.info(f"All values for field '{field}' are true in the response list.")
         except ValueError as err:
             logger.error(f"Failed to decode response JSON: {err}")
             pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
