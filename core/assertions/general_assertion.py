@@ -227,3 +227,21 @@ class ContentAssertion:
         except AssertionError as e:
             logger.error(f"Assertion failed: {e}")
             raise
+
+    @staticmethod
+    def assert_field_value_not_in_response(response, field, unexpected_value):
+        try:
+            response_json = response.json()
+            items_list = response_json.get('list', [])
+            logger.info(
+                f"Validating that the value '{unexpected_value}' is NOT present in the field '{field}' of the response list.")
+            field_values = [item.get(field) for item in items_list]
+            assert unexpected_value not in field_values, f"Unexpected value '{unexpected_value}' found in field '{field}' of the response list."
+            logger.info(
+                f"Value '{unexpected_value}' is not present in the field '{field}' of the response list, as expected.")
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise

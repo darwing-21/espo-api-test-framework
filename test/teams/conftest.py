@@ -38,3 +38,12 @@ def setup_teardown_user_team():
     before_add_user(team1.json()['id'], users_ids)
     yield team1.json()
     after_delete_team(team1.json()['id'])
+
+
+@pytest.fixture(scope="function")
+def setup_teardown_user_team_function():
+    team1 = before_create_team(generate_team_data())
+    users_ids = add_user_team_data(["52eb6b7c2a118", "53203b9428742"])
+    before_add_user(team1.json()['id'], users_ids)
+    yield team1.json()
+    after_delete_team(team1.json()['id'])

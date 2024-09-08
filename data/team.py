@@ -42,3 +42,10 @@ def add_user_team_data(users_ids=None):
         "ids": users_ids
     }
     return json.dumps(users_id_data)
+
+
+def delete_user_team_data(user_id):
+    user_id_data = {
+        "id": user_id
+    }
+    return json.dumps(user_id_data)

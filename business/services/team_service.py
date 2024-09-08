@@ -70,10 +70,10 @@ class TeamService:
         return response
 
     @staticmethod
-    def remove_user_team(url, user_type="valid_user"):
+    def remove_user_team(url, data=None, user_type="valid_user"):
         logger.info("Starting the process to remove a user from the team.")
         headers = Auth().build_headers(user_type, additional_headers={'Content-Type': 'application/json'})
         logger.debug(f"Preparing headers for the request: {headers}")
-        response = ApiManager.delete(url, headers=headers)
+        response = ApiManager.delete(url, data=data, headers=headers)
         logger.info("Finished processing the remove user from team request.")
         return response
