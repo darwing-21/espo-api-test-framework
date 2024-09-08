@@ -168,3 +168,16 @@ class ContentAssertion:
         except ValueError as err:
             logger.error(f"Failed to decode response JSON: {err}")
             pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+
+    @staticmethod
+    def assert_response_is_true(response):
+        try:
+            response_json = response.json()
+            logger.info(f"Validating that the response is true. Found: '{response_json}'.")
+            assert response_json is True, f"Expected response to be true, but got '{response_json}'."
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise

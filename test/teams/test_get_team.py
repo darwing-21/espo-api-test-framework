@@ -28,16 +28,14 @@ def test_view_deleted_team_returns_404(setup_team):
     AssertionManager.assert_status_code_404(response)
 
 
-@pytest.mark.lol
-def test_unauthenticated_user_cannot_create_team_returns_401(setup_team):
+def test_unauthenticated_user_cannot_view_team_returns_401(setup_team):
     team = setup_team
     url = EndpointTeams.get_team_id(team['id'])
     response = TeamService.view_team(url, "invalid_user")
     AssertionManager.assert_status_code_401(response)
 
 
-@pytest.mark.lol
-def test_user_without_permissions_cannot_create_team_returns_403(setup_team):
+def test_user_without_permissions_cannot_view_team_returns_403(setup_team):
     team = setup_team
     url = EndpointTeams.get_team_id(team['id'])
     response = TeamService.view_team(url, "no_team_access_user")
