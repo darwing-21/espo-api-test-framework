@@ -10,7 +10,7 @@ def setup_list_team():
     after_delete_team(team1.json()['id'])
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="function")
 def teardown_team():
     created_teams = []
     yield created_teams
@@ -18,7 +18,7 @@ def teardown_team():
         after_delete_team(team['id'])
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="function")
 def setup_team():
     team1 = before_create_team(generate_team_data())
     yield team1.json()
