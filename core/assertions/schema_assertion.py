@@ -74,7 +74,7 @@ class SchemaAssertion:
 
     @staticmethod
     def assert_update_team_schema_file(response):
-        return SchemaAssertion._validate_response_json(response, "update_team_schema.json", "team")
+        return SchemaAssertion._validate_payload_json(response, "update_team_schema.json", "team")
 
     @staticmethod
     def assert_add_users_to_team_schema_file(response):

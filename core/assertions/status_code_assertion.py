@@ -53,3 +53,15 @@ class StatusCodeAssertion:
         except AssertionError as e:
             logger.error(f"Assertion failed: {e}")
             raise
+
+    @staticmethod
+    def assert_status_code_404(response):
+        logger.info(f"Validating status code 404 for response with URL: {response.url}")
+        try:
+            assert response.status_code == 404, (
+                f"Expected status code 404, but got {response.status_code}. Response text: {response.text}"
+            )
+            logger.info("Status code 404 validated successfully.")
+        except AssertionError as e:
+            logger.error(f"Assertion failed: {e}")
+            raise

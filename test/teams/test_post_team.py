@@ -153,7 +153,6 @@ def test_unauthenticated_user_cannot_create_team_returns_401():
     AssertionManager.assert_status_code_401(response)
 
 
-@pytest.mark.lol
 def test_user_without_permissions_cannot_create_team_returns_403():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="Team Test QA")

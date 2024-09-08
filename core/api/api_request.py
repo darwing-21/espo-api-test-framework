@@ -32,7 +32,7 @@ class ApiManager:
     def put(url, headers, data):
         try:
             logger.info(f"PUT Request URL: {url} | {headers}")
-            response = requests.post(url, headers=headers, data=data)
+            response = requests.put(url, headers=headers, data=data)
             logger.info(f"Response Status Code: {response.status_code}")
             return response
         except requests.exceptions.RequestException as e:

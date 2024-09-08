@@ -154,3 +154,17 @@ class ContentAssertion:
         except ValueError as err:
             logger.error(f"Failed to decode response JSON: {err}")
             pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
+
+    @staticmethod
+    def assert_field_is_empty_list(response, field):
+        try:
+            response_json = response.json()
+            actual_value = response_json.get(field)
+
+            logger.info(f"Validating field '{field}' is an empty list. Found: '{actual_value}'.")
+            assert isinstance(actual_value,
+                              list), f"Expected '{field}' to be a list, but got {type(actual_value).__name__}."
+            assert len(actual_value) == 0, f"Expected '{field}' to be an empty list, but got '{actual_value}'."
+        except ValueError as err:
+            logger.error(f"Failed to decode response JSON: {err}")
+            pytest.fail(f"Failed to decode response JSON: {err}", pytrace=False)
