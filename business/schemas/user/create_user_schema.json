@@ -1,0 +1,178 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "teams": {
+      "type": "object",
+      "properties": {
+        "teamsIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "avatarId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deleteId": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "salutationName": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailAddressData": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "emailAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailAddressIsOptedOut": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "emailAddressIsInvalid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "phoneNumberData": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "phoneNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "phoneNumberIsOptedOut": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "phoneNumberIsInvalid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "gender": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "teamsIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "teamsNames": {
+      "type": "object"
+    },
+    "teamsColumns": {
+      "type": "object"
+    },
+    "defaultTeamName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "defaultTeamId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rolesIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rolesNames": {
+      "type": "object"
+    },
+    "workingTimeCalendarName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workingTimeCalendarId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "layoutSetName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "layoutSetId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "password": {
+      "type": "string"
+    },
+    "passwordConfirm": {
+      "type": "string"
+    },
+    "passwordInfo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "userName",
+    "salutationName",
+    "firstName",
+    "lastName"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdById": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "userName",
+          "type",
+          "isActive",
+          "createdById"
+        ]
+      }
+    }
+  },
+  "required": [
+    "total",
+    "list"
+  ]
+}

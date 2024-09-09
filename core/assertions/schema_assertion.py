@@ -87,3 +87,19 @@ class SchemaAssertion:
     @staticmethod
     def assert_team_users_schema_file(response):
         return SchemaAssertion._validate_response_json(response, "team_users_schema.json", "team")
+
+    @staticmethod
+    def assert_list_user_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "list_schema.json", "user")
+
+    @staticmethod
+    def assert_list_select_user_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "list_select_schema.json", "user")
+
+    @staticmethod
+    def assert_user_general_schema_file(response):
+        return SchemaAssertion._validate_response_json(response, "user_general_schema.json", "user")
+
+    @staticmethod
+    def assert_create_user_schema_file(data):
+        return SchemaAssertion._validate_payload_json(data, "create_user_schema.json", "user")

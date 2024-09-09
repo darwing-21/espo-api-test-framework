@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "salutationName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "emailAddress": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "middleName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "emailAddressIsOptedOut": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "emailAddressIsInvalid": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "createdById": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "userName",
+          "type",
+          "salutationName",
+          "firstName",
+          "lastName",
+          "isActive",
+          "title",
+          "emailAddress",
+          "middleName",
+          "emailAddressIsOptedOut",
+          "emailAddressIsInvalid",
+          "createdById"
+        ]
+      }
+    }
+  },
+  "required": [
+    "total",
+    "list"
+  ]
+}
