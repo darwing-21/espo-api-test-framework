@@ -6,6 +6,7 @@ from business.tools.assertion_manager import AssertionManager
 from data.team import delete_user_team_data
 
 
+@pytest.mark.removeuserteam
 def test_unlink_valid_user_from_team_with_valid_id_returns_200(setup_teardown_user_team_function):
     team = setup_teardown_user_team_function
     url = EndpointTeams.get_team_user(team['id'])
@@ -18,6 +19,7 @@ def test_unlink_valid_user_from_team_with_valid_id_returns_200(setup_teardown_us
     AssertionManager.assert_field_value_not_in_response(team_user, "id", "53203b9428742")
 
 
+@pytest.mark.removeuserteam
 def test_unlink_user_from_non_existent_team_id_returns_404(setup_teardown_user_team_function):
     team = setup_teardown_user_team_function
     url = EndpointTeams.get_team_user("invalid")
@@ -27,6 +29,7 @@ def test_unlink_user_from_non_existent_team_id_returns_404(setup_teardown_user_t
     AssertionManager.assert_status_code_404(response)
 
 
+@pytest.mark.removeuserteam
 def test_unlink_user_with_empty_id_returns_200(setup_teardown_user_team_function):
     team = setup_teardown_user_team_function
     url = EndpointTeams.get_team_user(team['id'])
@@ -36,15 +39,16 @@ def test_unlink_user_with_empty_id_returns_200(setup_teardown_user_team_function
     AssertionManager.assert_response_is_false(response)
 
 
-def test_unlink_user_with_non_existent_id_returns_400(setup_teardown_user_team_function):
+@pytest.mark.removeuserteam
+def test_unlink_user_with_non_existent_id_returns_404(setup_teardown_user_team_function):
     team = setup_teardown_user_team_function
     url = EndpointTeams.get_team_user(team['id'])
     data = delete_user_team_data("invalid")
     response = TeamService.remove_user_team(url, data)
-    AssertionManager.assert_status_code_400(response)
+    AssertionManager.assert_status_code_404(response)
 
 
-@pytest.mark.lol
+@pytest.mark.removeuserteam
 def test_unlink_user_teams_unauthenticated_user_returns_http_401(setup_teardown_user_team_function):
     team = setup_teardown_user_team_function
     url = EndpointTeams.get_team_user(team['id'])
@@ -54,7 +58,7 @@ def test_unlink_user_teams_unauthenticated_user_returns_http_401(setup_teardown_
     AssertionManager.assert_status_code_401(response)
 
 
-@pytest.mark.lol
+@pytest.mark.removeuserteam
 def test_user_without_permissions_cannot_access_unlink_user_teams_module_returns_403(setup_teardown_user_team_function):
     team = setup_teardown_user_team_function
     url = EndpointTeams.get_team_user(team['id'])

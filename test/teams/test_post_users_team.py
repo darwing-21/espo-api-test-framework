@@ -6,6 +6,7 @@ from business.tools.assertion_manager import AssertionManager
 from data.team import add_user_team_data
 
 
+@pytest.mark.adduserteam
 def test_link_valid_user_to_team_with_valid_id_returns_200(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user(team['id'])
@@ -18,6 +19,7 @@ def test_link_valid_user_to_team_with_valid_id_returns_200(setup_teardown_team):
     AssertionManager.assert_field_value_in_response(team_user, "id", "52eb6b7c2a118")
 
 
+@pytest.mark.adduserteam
 def test_link_multiple_valid_users_to_team_with_valid_id_returns_200(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user(team['id'])
@@ -31,6 +33,7 @@ def test_link_multiple_valid_users_to_team_with_valid_id_returns_200(setup_teard
     AssertionManager.assert_field_value_in_response(team_user, "id", "53203b9428742")
 
 
+@pytest.mark.adduserteam
 def test_link_users_to_team_with_non_existent_id_returns_404(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user('invalid')
@@ -40,6 +43,7 @@ def test_link_users_to_team_with_non_existent_id_returns_404(setup_teardown_team
     AssertionManager.assert_status_code_404(response)
 
 
+@pytest.mark.adduserteam
 def test_link_empty_user_id_array_to_team_returns_200(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user(team['id'])
@@ -49,6 +53,7 @@ def test_link_empty_user_id_array_to_team_returns_200(setup_teardown_team):
     AssertionManager.assert_response_is_false(response)
 
 
+@pytest.mark.adduserteam
 def test_link_user_with_invalid_or_non_existent_id_returns_404(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user(team['id'])
@@ -57,6 +62,7 @@ def test_link_user_with_invalid_or_non_existent_id_returns_404(setup_teardown_te
     AssertionManager.assert_status_code_404(response)
 
 
+@pytest.mark.adduserteam
 def test_link_user_teams_unauthenticated_user_returns_http_401(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user(team['id'])
@@ -66,6 +72,7 @@ def test_link_user_teams_unauthenticated_user_returns_http_401(setup_teardown_te
     AssertionManager.assert_status_code_401(response)
 
 
+@pytest.mark.adduserteam
 def test_user_without_permissions_cannot_access_link_user_teams_module_returns_403(setup_teardown_team):
     team = setup_teardown_team
     url = EndpointTeams.get_team_user(team['id'])

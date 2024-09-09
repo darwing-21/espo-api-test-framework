@@ -6,6 +6,7 @@ from business.tools.assertion_manager import AssertionManager
 from data.team import create_team_data
 
 
+@pytest.mark.createteam
 def test_create_team_with_valid_name_returns_201(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -23,6 +24,7 @@ def test_create_team_with_valid_name_returns_201(teardown_team):
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 @pytest.mark.xfail(reason="This test case is expected to fail due to known issue.", condition=True)
 def test_create_team_with_empty_name_returns_400():
     url = EndpointTeams.get_list_team()
@@ -32,6 +34,7 @@ def test_create_team_with_empty_name_returns_400():
     AssertionManager.assert_response_text_empty(response)
 
 
+@pytest.mark.createteam
 def test_create_team_with_name_at_100_char_limit_returns_200(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -47,6 +50,7 @@ def test_create_team_with_name_at_100_char_limit_returns_200(teardown_team):
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 def test_create_team_with_name_exceeding_100_char_limit_returns_400():
     url = EndpointTeams.get_base_team()
     data = create_team_data(
@@ -55,6 +59,7 @@ def test_create_team_with_name_exceeding_100_char_limit_returns_400():
     AssertionManager.assert_status_code_400(response)
 
 
+@pytest.mark.createteam
 def test_create_team_with_invalid_characters_in_name_returns_400():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="The<Best=Team>")
@@ -62,6 +67,7 @@ def test_create_team_with_invalid_characters_in_name_returns_400():
     AssertionManager.assert_status_code_400(response)
 
 
+@pytest.mark.createteam
 def test_create_team_with_valid_roles_ids_array_returns_200(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -74,6 +80,7 @@ def test_create_team_with_valid_roles_ids_array_returns_200(teardown_team):
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 def test_create_team_with_invalid_roles_ids_array_returns_403():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="Team Test QA", roles_ids=["invalid", "52bc41359000d"])
@@ -81,6 +88,7 @@ def test_create_team_with_invalid_roles_ids_array_returns_403():
     AssertionManager.assert_status_code_403(response)
 
 
+@pytest.mark.createteam
 def test_create_team_with_valid_position_list_returns_200(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -93,6 +101,7 @@ def test_create_team_with_valid_position_list_returns_200(teardown_team):
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 def test_create_team_with_valid_layout_set_id_returns_200(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -105,6 +114,7 @@ def test_create_team_with_valid_layout_set_id_returns_200(teardown_team):
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 def test_create_team_with_invalid_layout_set_id_returns_403():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="Team Test QA", layout_set_id="invalid")
@@ -112,6 +122,7 @@ def test_create_team_with_invalid_layout_set_id_returns_403():
     AssertionManager.assert_status_code_403(response)
 
 
+@pytest.mark.createteam
 def test_create_team_with_valid_working_time_calendar_id_returns_200(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -124,6 +135,7 @@ def test_create_team_with_valid_working_time_calendar_id_returns_200(teardown_te
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 def test_create_team_with_invalid_working_time_calendar_id_returns_400():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="Team Test QA", working_time_calendar_id="invalid")
@@ -131,6 +143,7 @@ def test_create_team_with_invalid_working_time_calendar_id_returns_400():
     AssertionManager.assert_status_code_403(response)
 
 
+@pytest.mark.createteam
 def test_create_team_without_optional_fields_returns_200(teardown_team):
     created_teams = teardown_team
     url = EndpointTeams.get_base_team()
@@ -145,6 +158,7 @@ def test_create_team_without_optional_fields_returns_200(teardown_team):
     created_teams.append(response.json())
 
 
+@pytest.mark.createteam
 def test_unauthenticated_user_cannot_create_team_returns_401():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="Team Test QA")
@@ -153,6 +167,7 @@ def test_unauthenticated_user_cannot_create_team_returns_401():
     AssertionManager.assert_status_code_401(response)
 
 
+@pytest.mark.createteam
 def test_user_without_permissions_cannot_create_team_returns_403():
     url = EndpointTeams.get_base_team()
     data = create_team_data(name="Team Test QA")

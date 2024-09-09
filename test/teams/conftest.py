@@ -31,6 +31,13 @@ def setup_teardown_team():
     after_delete_team(team1.json()['id'])
 
 
+@pytest.fixture(scope="function")
+def setup_teardown_team_module():
+    team1 = before_create_team(generate_team_data())
+    yield team1.json()
+    after_delete_team(team1.json()['id'])
+
+
 @pytest.fixture(scope="module")
 def setup_teardown_user_team():
     team1 = before_create_team(generate_team_data())

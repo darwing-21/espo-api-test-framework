@@ -6,6 +6,7 @@ from business.tools.assertion_manager import AssertionManager
 from data.team import create_team_data
 
 
+@pytest.mark.updateteam
 def test_update_team_with_min_length_name_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -18,6 +19,7 @@ def test_update_team_with_min_length_name_returns_200(setup_teardown_team):
     AssertionManager.assert_field_value(response, "id", team1['id'])
 
 
+@pytest.mark.updateteam
 def test_update_team_with_max_length_name_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -33,6 +35,7 @@ def test_update_team_with_max_length_name_returns_200(setup_teardown_team):
     AssertionManager.assert_field_value(response, "id", team1['id'])
 
 
+@pytest.mark.updateteam
 @pytest.mark.xfail(reason="This test case is expected to fail due to known issue.", condition=True)
 def test_update_team_with_empty_name_returns_400(setup_teardown_team):
     team1 = setup_teardown_team
@@ -43,6 +46,7 @@ def test_update_team_with_empty_name_returns_400(setup_teardown_team):
     AssertionManager.assert_status_code_400(response)
 
 
+@pytest.mark.updateteam
 def test_update_team_with_invalid_characters_in_name_returns_400(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -51,6 +55,7 @@ def test_update_team_with_invalid_characters_in_name_returns_400(setup_teardown_
     AssertionManager.assert_status_code_400(response)
 
 
+@pytest.mark.updateteam
 def test_update_team_with_name_exceeding_100_characters_returns_400(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -60,6 +65,7 @@ def test_update_team_with_name_exceeding_100_characters_returns_400(setup_teardo
     AssertionManager.assert_status_code_400(response)
 
 
+@pytest.mark.updateteam
 def test_update_team_with_empty_position_list_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -73,6 +79,7 @@ def test_update_team_with_empty_position_list_returns_200(setup_teardown_team):
     AssertionManager.assert_field_is_empty_list(response, "positionList")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_empty_role_ids_list_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -86,6 +93,7 @@ def test_update_team_with_empty_role_ids_list_returns_200(setup_teardown_team):
     AssertionManager.assert_field_is_empty_list(response, "rolesIds")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_valid_role_ids_list_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -99,6 +107,7 @@ def test_update_team_with_valid_role_ids_list_returns_200(setup_teardown_team):
     AssertionManager.assert_list_field_contains(response, "rolesIds", ["52bc41359084d"])
 
 
+@pytest.mark.updateteam
 def test_update_team_with_non_string_role_ids_returns_400(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -108,6 +117,7 @@ def test_update_team_with_non_string_role_ids_returns_400(setup_teardown_team):
     AssertionManager.assert_status_code_400(response)
 
 
+@pytest.mark.updateteam
 def test_update_team_with_valid_layout_set_id_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -121,6 +131,7 @@ def test_update_team_with_valid_layout_set_id_returns_200(setup_teardown_team):
     AssertionManager.assert_field_value(response, "layoutSetId", "66dd122413a481230")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_empty_layout_set_id_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -133,6 +144,7 @@ def test_update_team_with_empty_layout_set_id_returns_200(setup_teardown_team):
     AssertionManager.assert_field_is_null(response, "layoutSetId")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_valid_working_time_calendar_id_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -146,6 +158,7 @@ def test_update_team_with_valid_working_time_calendar_id_returns_200(setup_teard
     AssertionManager.assert_field_value(response, "workingTimeCalendarId", "66dd188740034f8d7")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_empty_working_time_calendar_id_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -158,6 +171,7 @@ def test_update_team_with_empty_working_time_calendar_id_returns_200(setup_teard
     AssertionManager.assert_field_is_null(response, "workingTimeCalendarId")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_all_valid_fields_returns_200(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -175,6 +189,7 @@ def test_update_team_with_all_valid_fields_returns_200(setup_teardown_team):
     AssertionManager.assert_field_value(response, "workingTimeCalendarId", "66dd188740034f8d7")
 
 
+@pytest.mark.updateteam
 def test_update_team_with_non_existent_id_returns_404():
     url = EndpointTeams.get_team_id("invalid")
     data = create_team_data(name="Team Developer")
@@ -182,6 +197,7 @@ def test_update_team_with_non_existent_id_returns_404():
     AssertionManager.assert_status_code_404(response)
 
 
+@pytest.mark.updateteam
 def test_unauthenticated_user_cannot_update_team_returns_401(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
@@ -191,6 +207,7 @@ def test_unauthenticated_user_cannot_update_team_returns_401(setup_teardown_team
     AssertionManager.assert_status_code_401(response)
 
 
+@pytest.mark.updateteam
 def test_user_without_permissions_cannot_update_team_returns_403(setup_teardown_team):
     team1 = setup_teardown_team
     url = EndpointTeams.get_team_id(team1['id'])
