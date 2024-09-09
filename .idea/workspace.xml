@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/business/endpoints/enpoint_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/user/create_user_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/user/list_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/user/list_select_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/schemas/user/user_general_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/business/services/user_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business/hooks/user/user_hooks.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
