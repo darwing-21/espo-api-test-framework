@@ -1,0 +1,43 @@
+2024-09-10 04:18:09,052 - team_hooks - INFO - Setting up for adding a team.
+2024-09-10 04:18:09,052 - team_service - INFO - Starting the process to create a team.
+2024-09-10 04:18:09,052 - auth_service - INFO - Initializing Auth class.
+2024-09-10 04:18:09,052 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-10 04:18:09,052 - auth_service - INFO - Auth class initialized successfully.
+2024-09-10 04:18:09,052 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-10 04:18:09,052 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-10 04:18:09,053 - auth_manager - INFO - Building headers for user: admin
+2024-09-10 04:18:09,053 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-10 04:18:09,053 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-10 04:18:09,053 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-10 04:18:09,053 - api_manager - INFO - POST Request URL: https://unitest.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-10 04:18:09,378 - api_manager - INFO - Response Status Code: 200
+2024-09-10 04:18:09,378 - team_service - INFO - Finished processing the create team request.
+2024-09-10 04:18:09,379 - team_service - INFO - Starting the process to update a team.
+2024-09-10 04:18:09,379 - auth_service - INFO - Initializing Auth class.
+2024-09-10 04:18:09,379 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-10 04:18:09,379 - auth_service - INFO - Auth class initialized successfully.
+2024-09-10 04:18:09,379 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-10 04:18:09,379 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-10 04:18:09,379 - auth_manager - INFO - Building headers for user: admin
+2024-09-10 04:18:09,379 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-10 04:18:09,379 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-10 04:18:09,379 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-10 04:18:09,379 - api_manager - INFO - PUT Request URL: https://unitest.espocloud.com/api/v1/Team/66dfc88150a008c18 | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-10 04:18:09,685 - api_manager - INFO - Response Status Code: 400
+2024-09-10 04:18:09,685 - team_service - INFO - Finished processing the update team request.
+2024-09-10 04:18:09,686 - status_code_assertion - INFO - Validating status code 400 for response with URL: https://unitest.espocloud.com/api/v1/Team/66dfc88150a008c18
+2024-09-10 04:18:09,686 - status_code_assertion - INFO - Status code 400 validated successfully.
+2024-09-10 04:18:09,687 - team_hooks - INFO - Setting up for delete a team.
+2024-09-10 04:18:09,687 - team_service - INFO - Starting the process to delete a team.
+2024-09-10 04:18:09,687 - auth_service - INFO - Initializing Auth class.
+2024-09-10 04:18:09,687 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-10 04:18:09,687 - auth_service - INFO - Auth class initialized successfully.
+2024-09-10 04:18:09,687 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-10 04:18:09,687 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-10 04:18:09,687 - auth_manager - INFO - Building headers for user: admin
+2024-09-10 04:18:09,687 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-10 04:18:09,687 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-10 04:18:09,687 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-10 04:18:09,687 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/Team/66dfc88150a008c18 | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-10 04:18:09,988 - api_manager - INFO - Response Status Code: 200
+2024-09-10 04:18:09,988 - team_service - INFO - Finished processing the delete team request.

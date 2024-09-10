@@ -1,0 +1,45 @@
+INFO     team_hooks:setup_teardown.py:9 Setting up for adding a team.
+INFO     team_service:team_service.py:20 Starting the process to create a team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_request.py:23 POST Request URL: https://unitest.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+INFO     api_manager:api_request.py:25 Response Status Code: 200
+INFO     team_service:team_service.py:24 Finished processing the create team request.
+INFO     schema_assertion:schema_assertion.py:16 Loaded schema: add_users_to_team_schema.json
+INFO     schema_assertion:schema_assertion.py:26 JSON schema validation for 'add_users_to_team_schema.json' passed.
+INFO     team_service:team_service.py:65 Starting the process to add users to the team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'invalid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'invalid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: invalid
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: invalid
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: invalid
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'invalid_user'
+INFO     api_manager:api_request.py:23 POST Request URL: https://unitest.espocloud.com/api/v1/Team/66dfc877610ba0043/users | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+INFO     api_manager:api_request.py:25 Response Status Code: 401
+INFO     team_service:team_service.py:69 Finished processing the add users to team request.
+INFO     status_code_assertion:status_code_assertion.py:47 Validating status code 401 for response with URL: https://unitest.espocloud.com/api/v1/Team/66dfc877610ba0043/users
+INFO     status_code_assertion:status_code_assertion.py:52 Status code 401 validated successfully.
+INFO     team_hooks:setup_teardown.py:16 Setting up for delete a team.
+INFO     team_service:team_service.py:29 Starting the process to delete a team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_request.py:45 DELETE Request URL: https://unitest.espocloud.com/api/v1/Team/66dfc877610ba0043 | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+INFO     api_manager:api_request.py:47 Response Status Code: 200
+INFO     team_service:team_service.py:33 Finished processing the delete team request.
