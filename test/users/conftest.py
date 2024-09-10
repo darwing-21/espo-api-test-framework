@@ -8,5 +8,12 @@ def setup_teardown_user(setup_teardown_team):
     team = setup_teardown_team
     user = before_create_user(generate_user_data([team['id']]))
     yield user.json()
-    print(user.json())
     after_delete_user(user.json()['id'])
+
+
+@pytest.fixture(scope="function")
+def teardown_user(setup_teardown_team):
+    created_user = []
+    yield created_user
+    for user in created_user:
+        after_delete_user(user['id'])

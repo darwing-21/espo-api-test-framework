@@ -26,10 +26,12 @@ def test_create_team_with_valid_name_returns_201(teardown_team):
 
 @pytest.mark.createteam
 @pytest.mark.xfail(reason="This test case is expected to fail due to known issue.", condition=True)
-def test_create_team_with_empty_name_returns_400():
+def test_create_team_with_empty_name_returns_400(teardown_team):
+    created_teams = teardown_team
     url = EndpointTeams.get_list_team()
     data = create_team_data(name="")
     response = TeamService.create_team(url, data)
+    created_teams.append(response.json())
     AssertionManager.assert_status_code_400(response)
     AssertionManager.assert_response_text_empty(response)
 
