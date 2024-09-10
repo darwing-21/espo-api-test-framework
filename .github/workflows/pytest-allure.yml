@@ -1,51 +1,43 @@
-name: Pytest with Allure
+name: Allure Report
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
     branches:
       - main
-    types: [ opened, reopened, synchronize ]
-  workflow_dispatch:
 
 jobs:
-  test:
+  autotests:
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.12.2'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests
+      - name: Run Tests
         run: |
-          source venv/bin/activate
-          pytest --alluredir=allure-results || true
+          pytest --alluredir=allure-results
+        continue-on-error: true
 
-      - name: Publish Allure Results
-        uses: actions/upload-artifact@v3
+      - name: Get Allure history
+        uses: actions/checkout@v3
         with:
-          name: allure-results
-          path: allure-results
+          ref: gh-pages
+          path: allure-history
+        continue-on-error: true
 
-      - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@master
-        if: always()
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@v1.7
         with:
           allure_results: allure-results
           allure_report: allure-report

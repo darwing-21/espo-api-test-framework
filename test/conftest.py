@@ -1,7 +1,7 @@
 import pytest
 from business.hooks.team.setup_teardown import before_create_team, after_delete_team
 from business.hooks.user.user_hooks import before_create_user
-from data.team import generate_team_data, add_user_team_data
+from data.team import generate_team_data
 from data.user import generate_user_data
 
 
