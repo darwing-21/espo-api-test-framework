@@ -33,7 +33,7 @@ def test_get_user_unauthenticated_returns_401(setup_teardown_user):
 def test_get_user_without_permission_returns_403(setup_teardown_user):
     user = setup_teardown_user
     url = EndpointUser.get_user_id(user['id'])
-    response = UserService.view_user(url, "no_team_access_user")
+    response = UserService.view_user(url, "no_users_access_user")
     AssertionManager.assert_status_code_403(response)
 
 
