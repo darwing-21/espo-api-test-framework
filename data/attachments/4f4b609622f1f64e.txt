@@ -1,0 +1,15 @@
+2024-09-11 21:05:35,829 - team_service - INFO - Starting the process to get the users of the team.
+2024-09-11 21:05:35,829 - auth_service - INFO - Initializing Auth class.
+2024-09-11 21:05:35,829 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 21:05:35,830 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 21:05:35,830 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 21:05:35,830 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 21:05:35,830 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 21:05:35,830 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 21:05:35,830 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 21:05:35,830 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 21:05:35,830 - api_manager - INFO - GET Request URL: https://unitest.espocloud.com/api/v1/Team/66e2061e2aa9c10d3/users?primaryFilter=active&select=teamRole%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=5&offset=-1&orderBy=userName&order=asc | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7'}
+2024-09-11 21:05:36,031 - api_manager - INFO - Response Status Code: 500
+2024-09-11 21:05:36,031 - team_service - INFO - Finished processing the users team list request.
+2024-09-11 21:05:36,031 - status_code_assertion - INFO - Validating status code 400 for response with URL: https://unitest.espocloud.com/api/v1/Team/66e2061e2aa9c10d3/users?primaryFilter=active&select=teamRole%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=5&offset=-1&orderBy=userName&order=asc
+2024-09-11 21:05:36,031 - status_code_assertion - ERROR - Assertion failed: Expected status code 400, but got 500. Response text: 
