@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/allure-report.yml" afterDir="false" />
-    </list>
+    <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +143,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;-m deleteuser&quot;" />
+      <option name="_new_additionalArguments" value="&quot;-m updateuser&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
