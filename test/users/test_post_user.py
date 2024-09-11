@@ -72,7 +72,7 @@ def test_create_user_with_invalid_or_missing_is_active_defaults_to_false_returns
 
 
 @pytest.mark.createuser
-def test_create_user_with_valid_user_name_length_and_characters_returns_200():
+def test_create_user_with_valid_user_name_length_and_characters_returns_200(teardown_user):
     created_teams = teardown_user
     url = EndpointUser.get_base_user()
     data = create_user_data(user_name="username_valid123")
