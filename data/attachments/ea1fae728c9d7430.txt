@@ -1,0 +1,15 @@
+2024-09-11 21:38:38,502 - team_service - INFO - Starting the process to get the team list.
+2024-09-11 21:38:38,502 - auth_service - INFO - Initializing Auth class.
+2024-09-11 21:38:38,502 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 21:38:38,502 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 21:38:38,502 - auth_service - INFO - Building headers for user type: 'invalid_user'
+2024-09-11 21:38:38,502 - auth_service - INFO - Fetching user details for user type: 'invalid_user'
+2024-09-11 21:38:38,502 - auth_manager - INFO - Building headers for user: invalid
+2024-09-11 21:38:38,502 - auth_manager - INFO - Encoding credentials for user: invalid
+2024-09-11 21:38:38,503 - auth_manager - INFO - Headers build successfully for user: invalid
+2024-09-11 21:38:38,503 - auth_service - INFO - Headers successfully built for user type: 'invalid_user'
+2024-09-11 21:38:38,503 - api_manager - INFO - GET Request URL: https://unitest.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7'}
+2024-09-11 21:38:38,651 - api_manager - INFO - Response Status Code: 401
+2024-09-11 21:38:38,651 - team_service - INFO - Finished processing the team list request.
+2024-09-11 21:38:38,651 - status_code_assertion - INFO - Validating status code 401 for response with URL: https://unitest.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc
+2024-09-11 21:38:38,651 - status_code_assertion - INFO - Status code 401 validated successfully.

@@ -1,0 +1,21 @@
+INFO     team_service:team_service.py:11 Starting the process to get the team list.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_request.py:12 GET Request URL: https://unitest.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7'}
+INFO     api_manager:api_request.py:14 Response Status Code: 200
+INFO     team_service:team_service.py:15 Finished processing the team list request.
+INFO     status_code_assertion:status_code_assertion.py:9 Validating status code 200 for response with URL: https://unitest.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc
+INFO     status_code_assertion:status_code_assertion.py:14 Status code 200 validated successfully.
+INFO     status_code_assertion:status_code_assertion.py:16 Response body is not empty.
+INFO     schema_assertion:schema_assertion.py:41 Validating response JSON against 'list_select_schema.json'
+INFO     schema_assertion:schema_assertion.py:16 Loaded schema: list_select_schema.json
+INFO     schema_assertion:schema_assertion.py:26 JSON schema validation for 'list_select_schema.json' passed.
+INFO     content_assertion:general_assertion.py:24 Validating 'list' is not empty. Found 8 items.
+INFO     content_assertion:general_assertion.py:13 Validating 'total' is greater than 0. Found: 8
