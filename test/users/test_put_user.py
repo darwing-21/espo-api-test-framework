@@ -68,7 +68,6 @@ def test_update_user_with_invalid_or_missing_is_active_defaults_to_false_returns
     AssertionManager.assert_field_value(response, "isActive", False)
 
 
-
 @pytest.mark.updateuser
 def test_update_user_with_valid_user_name_length_and_characters_returns_200(setup_teardown_user_function):
     user = setup_teardown_user_function
@@ -82,7 +81,6 @@ def test_update_user_with_valid_user_name_length_and_characters_returns_200(setu
 
 
 @pytest.mark.updateuser
-
 def test_update_user_with_invalid_user_name_length_or_characters_returns_400(setup_teardown_user_function):
     user = setup_teardown_user_function
     url = EndpointUser.get_user_id(user['id'])
@@ -92,8 +90,6 @@ def test_update_user_with_invalid_user_name_length_or_characters_returns_400(set
 
 
 @pytest.mark.updateuser
-
-@pytest.mark.lol
 def test_update_user_with_valid_first_name_up_to_100_characters_returns_200(setup_teardown_user_function):
     user = setup_teardown_user_function
     url = EndpointUser.get_user_id(user['id'])
