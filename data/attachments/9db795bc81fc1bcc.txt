@@ -1,0 +1,39 @@
+2024-09-11 20:56:06,380 - user_hooks - INFO - Setting up for adding a user.
+2024-09-11 20:56:06,380 - user_service - INFO - Starting the process to create a user.
+2024-09-11 20:56:06,381 - auth_service - INFO - Initializing Auth class.
+2024-09-11 20:56:06,381 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 20:56:06,381 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 20:56:06,381 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 20:56:06,381 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 20:56:06,381 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 20:56:06,381 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 20:56:06,381 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 20:56:06,381 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 20:56:06,381 - api_manager - INFO - POST Request URL: https://unitest.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 20:56:06,581 - api_manager - INFO - Response Status Code: 200
+2024-09-11 20:56:06,581 - user_service - INFO - Finished processing the create user request.
+2024-09-11 20:56:06,582 - user_service - INFO - Starting the process to get the user list.
+2024-09-11 20:56:06,582 - auth_service - INFO - Initializing Auth class.
+2024-09-11 20:56:06,582 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 20:56:06,582 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 20:56:06,582 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 20:56:06,582 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 20:56:06,583 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 20:56:06,583 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 20:56:06,583 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 20:56:06,583 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 20:56:06,583 - api_manager - INFO - GET Request URL: https://unitest.espocloud.com/api/v1/User?userType=internal&select=isActive%2CemailAddressIsOptedOut%2CemailAddressIsInvalid%2CemailAddress%2CemailAddressData%2Ctitle%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=20&offset=0&orderBy=userName&order=asc | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7'}
+2024-09-11 20:56:06,769 - api_manager - INFO - Response Status Code: 200
+2024-09-11 20:56:06,769 - user_service - INFO - Finished processing the user list request.
+2024-09-11 20:56:06,769 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://unitest.espocloud.com/api/v1/User?userType=internal&select=isActive%2CemailAddressIsOptedOut%2CemailAddressIsInvalid%2CemailAddress%2CemailAddressData%2Ctitle%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=20&offset=0&orderBy=userName&order=asc
+2024-09-11 20:56:06,769 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-09-11 20:56:06,769 - status_code_assertion - INFO - Response body is not empty.
+2024-09-11 20:56:06,770 - schema_assertion - INFO - Validating response JSON against 'list_schema.json'
+2024-09-11 20:56:06,770 - schema_assertion - INFO - Loaded schema: list_schema.json
+2024-09-11 20:56:06,777 - schema_assertion - INFO - JSON schema validation for 'list_schema.json' passed.
+2024-09-11 20:56:06,778 - content_assertion - INFO - Validating 'list' is not empty. Found 13 items.
+2024-09-11 20:56:06,778 - content_assertion - INFO - Validating 'total' is greater than 0. Found: 13
+2024-09-11 20:56:06,778 - content_assertion - INFO - Validating that the value '66e203e6864466800' is present in the field 'id' of the response list.
+2024-09-11 20:56:06,778 - content_assertion - INFO - Value '66e203e6864466800' successfully validated in the field 'id' of the response list.
+2024-09-11 20:56:06,778 - content_assertion - INFO - Validating that the value '66d8f6a634904dc79' is NOT present in the field 'id' of the response list.
+2024-09-11 20:56:06,778 - content_assertion - INFO - Value '66d8f6a634904dc79' is not present in the field 'id' of the response list, as expected.
