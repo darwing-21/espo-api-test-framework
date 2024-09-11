@@ -195,9 +195,9 @@ def test_update_user_with_invalid_gender_returns_400(setup_teardown_user_functio
 
 
 @pytest.mark.updateuser
-def test_update_user_with_valid_teams_ids_returns_200(setup_teardown_user_function, setup_teardown_team):
+def test_update_user_with_valid_teams_ids_returns_200(setup_teardown_user_function, setup_teardown_team_global):
     user = setup_teardown_user_function
-    team = setup_teardown_team
+    team = setup_teardown_team_global
     url = EndpointUser.get_user_id(user['id'])
     data = create_user_data(teams_ids=[team['id']])
     AssertionManager.assert_create_user_schema_file(json.loads(data))
@@ -217,9 +217,9 @@ def test_update_user_with_invalid_teams_ids_returns_400(setup_teardown_user_func
 
 
 @pytest.mark.updateuser
-def test_update_user_with_valid_default_team_id_returns_200(setup_teardown_user_function, setup_teardown_team):
+def test_update_user_with_valid_default_team_id_returns_200(setup_teardown_user_function, setup_teardown_team_global):
     user = setup_teardown_user_function
-    team = setup_teardown_team
+    team = setup_teardown_team_global
     url = EndpointUser.get_user_id(user['id'])
     data = create_user_data(teams_ids=[team['id']], default_team_id=team['id'])
     AssertionManager.assert_create_user_schema_file(json.loads(data))
@@ -230,9 +230,9 @@ def test_update_user_with_valid_default_team_id_returns_200(setup_teardown_user_
 
 
 @pytest.mark.updateuser
-def test_update_user_with_invalid_default_team_id_returns_400(setup_teardown_user_function, setup_teardown_team):
+def test_update_user_with_invalid_default_team_id_returns_400(setup_teardown_user_function, setup_teardown_team_global):
     user = setup_teardown_user_function
-    team = setup_teardown_team
+    team = setup_teardown_team_global
     url = EndpointUser.get_user_id(user['id'])
     data = create_user_data(teams_ids=[team['id']], default_team_id="invalid")
     response = UserService.update_user(url, data)
