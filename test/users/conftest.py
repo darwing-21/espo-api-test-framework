@@ -4,15 +4,15 @@ from data.user import generate_user_data
 
 
 @pytest.fixture(scope="module")
-def setup_teardown_user(setup_teardown_team):
-    team = setup_teardown_team
+def setup_teardown_user(setup_teardown_team_global):
+    team = setup_teardown_team_global
     user = before_create_user(generate_user_data([team['id']]))
     yield user.json()
     after_delete_user(user.json()['id'])
 
 
 @pytest.fixture(scope="function")
-def teardown_user(setup_teardown_team):
+def teardown_user():
     created_user = []
     yield created_user
     for user in created_user:
@@ -20,15 +20,15 @@ def teardown_user(setup_teardown_team):
 
 
 @pytest.fixture(scope="function")
-def setup_teardown_user_function(setup_teardown_team):
-    team = setup_teardown_team
+def setup_teardown_user_function(setup_teardown_team_global):
+    team = setup_teardown_team_global
     user = before_create_user(generate_user_data([team['id']]))
     yield user.json()
     after_delete_user(user.json()['id'])
 
 
 @pytest.fixture(scope="function")
-def setup_user(setup_teardown_team):
-    team = setup_teardown_team
+def setup_user(setup_teardown_team_global):
+    team = setup_teardown_team_global
     user = before_create_user(generate_user_data([team['id']]))
     yield user.json()

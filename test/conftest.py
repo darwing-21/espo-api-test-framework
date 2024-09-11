@@ -6,7 +6,7 @@ from data.user import generate_user_data
 
 
 @pytest.fixture(scope="session")
-def setup_teardown_team():
+def setup_teardown_team_global():
     team = before_create_team(generate_team_data())
     yield team.json()
     after_delete_team(team.json()['id'])
