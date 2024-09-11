@@ -1,0 +1,35 @@
+2024-09-11 20:44:39,936 - team_service - INFO - Starting the process to get the team list.
+2024-09-11 20:44:39,936 - auth_service - INFO - Initializing Auth class.
+2024-09-11 20:44:39,936 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 20:44:39,936 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 20:44:39,936 - auth_service - INFO - Building headers for user type: 'self_teams_user'
+2024-09-11 20:44:39,936 - auth_service - INFO - Fetching user details for user type: 'self_teams_user'
+2024-09-11 20:44:39,936 - auth_manager - INFO - Building headers for user: dar_demo
+2024-09-11 20:44:39,936 - auth_manager - INFO - Encoding credentials for user: dar_demo
+2024-09-11 20:44:39,936 - auth_manager - INFO - Headers build successfully for user: dar_demo
+2024-09-11 20:44:39,936 - auth_service - INFO - Headers successfully built for user type: 'self_teams_user'
+2024-09-11 20:44:39,936 - api_manager - INFO - GET Request URL: https://unitest.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc | {'Espo-Authorization': 'ZGFyX2RlbW86MTIzNDU=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7'}
+2024-09-11 20:44:40,161 - api_manager - INFO - Response Status Code: 200
+2024-09-11 20:44:40,161 - team_service - INFO - Finished processing the team list request.
+2024-09-11 20:44:40,162 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://unitest.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc
+2024-09-11 20:44:40,162 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-09-11 20:44:40,162 - status_code_assertion - INFO - Response body is not empty.
+2024-09-11 20:44:40,162 - schema_assertion - INFO - Validating response JSON against 'list_select_schema.json'
+2024-09-11 20:44:40,162 - schema_assertion - INFO - Loaded schema: list_select_schema.json
+2024-09-11 20:44:40,165 - schema_assertion - INFO - JSON schema validation for 'list_select_schema.json' passed.
+2024-09-11 20:44:40,165 - content_assertion - INFO - Validating 'list' is not empty. Found 1 items.
+2024-09-11 20:44:40,165 - content_assertion - INFO - Validating list contains 1 items. Found: 1.
+2024-09-11 20:44:40,166 - team_hooks - INFO - Setting up for delete a team.
+2024-09-11 20:44:40,166 - team_service - INFO - Starting the process to delete a team.
+2024-09-11 20:44:40,166 - auth_service - INFO - Initializing Auth class.
+2024-09-11 20:44:40,166 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 20:44:40,166 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 20:44:40,166 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 20:44:40,166 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 20:44:40,166 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 20:44:40,166 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 20:44:40,166 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 20:44:40,166 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 20:44:40,167 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/Team/66e201346aa622612 | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 20:44:40,342 - api_manager - INFO - Response Status Code: 200
+2024-09-11 20:44:40,342 - team_service - INFO - Finished processing the delete team request.
