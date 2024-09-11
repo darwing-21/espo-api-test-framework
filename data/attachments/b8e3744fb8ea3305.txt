@@ -1,0 +1,50 @@
+2024-09-11 22:01:10,744 - user_hooks - INFO - Setting up for adding a user.
+2024-09-11 22:01:10,745 - user_service - INFO - Starting the process to create a user.
+2024-09-11 22:01:10,745 - auth_service - INFO - Initializing Auth class.
+2024-09-11 22:01:10,745 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 22:01:10,745 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 22:01:10,745 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 22:01:10,745 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 22:01:10,745 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 22:01:10,745 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 22:01:10,745 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 22:01:10,745 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 22:01:10,745 - api_manager - INFO - POST Request URL: https://unitest.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 22:01:11,099 - api_manager - INFO - Response Status Code: 200
+2024-09-11 22:01:11,099 - user_service - INFO - Finished processing the create user request.
+2024-09-11 22:01:11,101 - schema_assertion - INFO - Loaded schema: create_user_schema.json
+2024-09-11 22:01:11,114 - schema_assertion - INFO - JSON schema validation for 'create_user_schema.json' passed.
+2024-09-11 22:01:11,114 - user_service - INFO - Starting the process to update a user.
+2024-09-11 22:01:11,114 - auth_service - INFO - Initializing Auth class.
+2024-09-11 22:01:11,114 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 22:01:11,114 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 22:01:11,115 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 22:01:11,115 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 22:01:11,115 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 22:01:11,115 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 22:01:11,115 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 22:01:11,115 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 22:01:11,115 - api_manager - INFO - PUT Request URL: https://unitest.espocloud.com/api/v1/User/66e213270a2d044ca | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 22:01:11,453 - api_manager - INFO - Response Status Code: 200
+2024-09-11 22:01:11,454 - user_service - INFO - Finished processing the update user request.
+2024-09-11 22:01:11,454 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://unitest.espocloud.com/api/v1/User/66e213270a2d044ca
+2024-09-11 22:01:11,454 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-09-11 22:01:11,454 - status_code_assertion - INFO - Response body is not empty.
+2024-09-11 22:01:11,454 - schema_assertion - INFO - Validating response JSON against 'user_general_schema.json'
+2024-09-11 22:01:11,454 - schema_assertion - INFO - Loaded schema: user_general_schema.json
+2024-09-11 22:01:11,475 - schema_assertion - INFO - JSON schema validation for 'user_general_schema.json' passed.
+2024-09-11 22:01:11,475 - content_assertion - INFO - Validating field 'avatarColor'. Expected: '#FFFFFF', Found: '#FFFFFF'.
+2024-09-11 22:01:11,476 - user_hooks - INFO - Setting up for delete a user.
+2024-09-11 22:01:11,476 - user_service - INFO - Starting the process to delete a user.
+2024-09-11 22:01:11,476 - auth_service - INFO - Initializing Auth class.
+2024-09-11 22:01:11,477 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 22:01:11,477 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 22:01:11,477 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 22:01:11,477 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 22:01:11,477 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 22:01:11,477 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 22:01:11,477 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 22:01:11,477 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 22:01:11,477 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/User/66e213270a2d044ca | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 22:01:11,807 - api_manager - INFO - Response Status Code: 200
+2024-09-11 22:01:11,807 - user_service - INFO - Finished processing the delete user request.

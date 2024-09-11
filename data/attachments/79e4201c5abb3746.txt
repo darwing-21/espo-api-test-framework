@@ -1,0 +1,59 @@
+2024-09-11 21:59:18,529 - team_hooks - INFO - Setting up for adding a team.
+2024-09-11 21:59:18,529 - team_service - INFO - Starting the process to create a team.
+2024-09-11 21:59:18,529 - auth_service - INFO - Initializing Auth class.
+2024-09-11 21:59:18,530 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 21:59:18,530 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 21:59:18,530 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 21:59:18,530 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 21:59:18,530 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 21:59:18,530 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 21:59:18,530 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 21:59:18,530 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 21:59:18,530 - api_manager - INFO - POST Request URL: https://unitest.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 21:59:18,854 - api_manager - INFO - Response Status Code: 200
+2024-09-11 21:59:18,854 - team_service - INFO - Finished processing the create team request.
+2024-09-11 21:59:18,854 - team_hooks - INFO - Setting up for add users a team.
+2024-09-11 21:59:18,854 - team_service - INFO - Starting the process to add users to the team.
+2024-09-11 21:59:18,854 - auth_service - INFO - Initializing Auth class.
+2024-09-11 21:59:18,854 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 21:59:18,855 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 21:59:18,855 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 21:59:18,855 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 21:59:18,855 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 21:59:18,855 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 21:59:18,855 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 21:59:18,855 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 21:59:18,855 - api_manager - INFO - POST Request URL: https://unitest.espocloud.com/api/v1/Team/66e212b6c484bf686/users | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 21:59:19,179 - api_manager - INFO - Response Status Code: 200
+2024-09-11 21:59:19,179 - team_service - INFO - Finished processing the add users to team request.
+2024-09-11 21:59:19,180 - schema_assertion - INFO - Loaded schema: remove_user_from_team_schema.json
+2024-09-11 21:59:19,181 - schema_assertion - INFO - JSON schema validation for 'remove_user_from_team_schema.json' passed.
+2024-09-11 21:59:19,181 - team_service - INFO - Starting the process to remove a user from the team.
+2024-09-11 21:59:19,181 - auth_service - INFO - Initializing Auth class.
+2024-09-11 21:59:19,181 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 21:59:19,181 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 21:59:19,181 - auth_service - INFO - Building headers for user type: 'invalid_user'
+2024-09-11 21:59:19,181 - auth_service - INFO - Fetching user details for user type: 'invalid_user'
+2024-09-11 21:59:19,181 - auth_manager - INFO - Building headers for user: invalid
+2024-09-11 21:59:19,181 - auth_manager - INFO - Encoding credentials for user: invalid
+2024-09-11 21:59:19,181 - auth_manager - INFO - Headers build successfully for user: invalid
+2024-09-11 21:59:19,182 - auth_service - INFO - Headers successfully built for user type: 'invalid_user'
+2024-09-11 21:59:19,182 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/Team/66e212b6c484bf686/users | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 21:59:19,468 - api_manager - INFO - Response Status Code: 401
+2024-09-11 21:59:19,468 - team_service - INFO - Finished processing the remove user from team request.
+2024-09-11 21:59:19,468 - status_code_assertion - INFO - Validating status code 401 for response with URL: https://unitest.espocloud.com/api/v1/Team/66e212b6c484bf686/users
+2024-09-11 21:59:19,468 - status_code_assertion - INFO - Status code 401 validated successfully.
+2024-09-11 21:59:19,469 - team_hooks - INFO - Setting up for delete a team.
+2024-09-11 21:59:19,469 - team_service - INFO - Starting the process to delete a team.
+2024-09-11 21:59:19,469 - auth_service - INFO - Initializing Auth class.
+2024-09-11 21:59:19,469 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-11 21:59:19,469 - auth_service - INFO - Auth class initialized successfully.
+2024-09-11 21:59:19,469 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-11 21:59:19,469 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-11 21:59:19,469 - auth_manager - INFO - Building headers for user: admin
+2024-09-11 21:59:19,469 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-11 21:59:19,470 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-11 21:59:19,470 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-11 21:59:19,470 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/Team/66e212b6c484bf686 | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-11 21:59:19,779 - api_manager - INFO - Response Status Code: 200
+2024-09-11 21:59:19,779 - team_service - INFO - Finished processing the delete team request.
