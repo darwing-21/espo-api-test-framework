@@ -75,10 +75,10 @@ class ContentAssertion:
             response_json = response.json()
             items = response_json.get('list', [])
 
-            values = [item.get(field) for item in items if item.get(field) is not None]
+            values = [item.get(field).strip() for item in items if item.get(field) is not None]
             logger.info(f"Validating list is ordered by '{field}' in ascending order.")
             logger.info(f"Values being validated: {values}")
-            assert values == sorted(values), (
+            assert values == sorted(values, key=lambda x: x.lower()), (
                 f"Expected list to be ordered by '{field}' in ascending order, but got: {values}."
             )
         except ValueError as err:
@@ -94,10 +94,11 @@ class ContentAssertion:
             response_json = response.json()
             items = response_json.get('list', [])
 
-            values = [item.get(field) for item in items if item.get(field) is not None]
+            values = [item.get(field).strip() for item in items if item.get(field) is not None]
             logger.info(f"Validating list is ordered by '{field}' in descending order.")
             logger.info(f"Values being validated: {values}")
-            assert values == sorted(values, reverse=True), (
+
+            assert values == sorted(values, key=lambda x: x.lower(), reverse=True), (
                 f"Expected list to be ordered by '{field}' in descending order, but got: {values}."
             )
         except ValueError as err:
