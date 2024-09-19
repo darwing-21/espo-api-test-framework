@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/teams/test_post_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_post_team.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/teams/test_put_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_put_team.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/users/test_put_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/users/test_put_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/teams/test_get_users_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_get_users_team.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +146,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;--alluredir allure-results&quot;" />
+      <option name="_new_additionalArguments" value="&quot;-m listuserteam --alluredir allure-results&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
