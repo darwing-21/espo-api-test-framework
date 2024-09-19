@@ -1,0 +1,43 @@
+2024-09-19 13:18:35,925 - user_hooks - INFO - Setting up for adding a user.
+2024-09-19 13:18:35,925 - user_service - INFO - Starting the process to create a user.
+2024-09-19 13:18:35,925 - auth_service - INFO - Initializing Auth class.
+2024-09-19 13:18:35,925 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-19 13:18:35,925 - auth_service - INFO - Auth class initialized successfully.
+2024-09-19 13:18:35,925 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-19 13:18:35,925 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-19 13:18:35,926 - auth_manager - INFO - Building headers for user: admin
+2024-09-19 13:18:35,926 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-19 13:18:35,926 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-19 13:18:35,926 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-19 13:18:35,926 - api_manager - INFO - POST Request URL: https://unitest.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-19 13:18:36,131 - api_manager - INFO - Response Status Code: 200
+2024-09-19 13:18:36,131 - user_service - INFO - Finished processing the create user request.
+2024-09-19 13:18:36,132 - user_service - INFO - Starting the process to delete a user.
+2024-09-19 13:18:36,132 - auth_service - INFO - Initializing Auth class.
+2024-09-19 13:18:36,132 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-19 13:18:36,133 - auth_service - INFO - Auth class initialized successfully.
+2024-09-19 13:18:36,133 - auth_service - INFO - Building headers for user type: 'invalid_user'
+2024-09-19 13:18:36,133 - auth_service - INFO - Fetching user details for user type: 'invalid_user'
+2024-09-19 13:18:36,133 - auth_manager - INFO - Building headers for user: invalid
+2024-09-19 13:18:36,133 - auth_manager - INFO - Encoding credentials for user: invalid
+2024-09-19 13:18:36,133 - auth_manager - INFO - Headers build successfully for user: invalid
+2024-09-19 13:18:36,133 - auth_service - INFO - Headers successfully built for user type: 'invalid_user'
+2024-09-19 13:18:36,133 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/User/66ec24ac17b25a042 | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-19 13:18:36,280 - api_manager - INFO - Response Status Code: 401
+2024-09-19 13:18:36,280 - user_service - INFO - Finished processing the delete user request.
+2024-09-19 13:18:36,280 - status_code_assertion - INFO - Validating status code 401 for response with URL: https://unitest.espocloud.com/api/v1/User/66ec24ac17b25a042
+2024-09-19 13:18:36,280 - status_code_assertion - INFO - Status code 401 validated successfully.
+2024-09-19 13:18:36,281 - user_hooks - INFO - Setting up for delete a user.
+2024-09-19 13:18:36,281 - user_service - INFO - Starting the process to delete a user.
+2024-09-19 13:18:36,281 - auth_service - INFO - Initializing Auth class.
+2024-09-19 13:18:36,281 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-09-19 13:18:36,282 - auth_service - INFO - Auth class initialized successfully.
+2024-09-19 13:18:36,282 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-09-19 13:18:36,282 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-09-19 13:18:36,282 - auth_manager - INFO - Building headers for user: admin
+2024-09-19 13:18:36,282 - auth_manager - INFO - Encoding credentials for user: admin
+2024-09-19 13:18:36,282 - auth_manager - INFO - Headers build successfully for user: admin
+2024-09-19 13:18:36,282 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-09-19 13:18:36,282 - api_manager - INFO - DELETE Request URL: https://unitest.espocloud.com/api/v1/User/66ec24ac17b25a042 | {'Espo-Authorization': 'YWRtaW46ODAwNDkwNTM=', 'X-Api-Key': '4c29fe9482f3bccb7ac0a7d04015a2e7', 'Content-Type': 'application/json'}
+2024-09-19 13:18:36,476 - api_manager - INFO - Response Status Code: 200
+2024-09-19 13:18:36,477 - user_service - INFO - Finished processing the delete user request.
