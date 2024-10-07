@@ -1,0 +1,34 @@
+2024-10-07 16:03:04,958 - user_hooks - INFO - Setting up for adding a user.
+2024-10-07 16:03:04,958 - user_service - INFO - Starting the process to create a user.
+2024-10-07 16:03:04,958 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:03:04,958 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:03:04,958 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:03:04,958 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:03:04,958 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:03:04,959 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:03:04,959 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:03:04,959 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:03:04,959 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:03:04,959 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:03:05,356 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:03:05,357 - user_service - INFO - Finished processing the create user request.
+2024-10-07 16:03:05,357 - user_service - INFO - Starting the process to view the user.
+2024-10-07 16:03:05,357 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:03:05,357 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:03:05,358 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:03:05,358 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:03:05,358 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:03:05,358 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:03:05,358 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:03:05,358 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:03:05,358 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:03:05,358 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/User/67040639458df530c | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-07 16:03:05,722 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:03:05,722 - user_service - INFO - Finished processing the user view request.
+2024-10-07 16:03:05,723 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User/67040639458df530c
+2024-10-07 16:03:05,723 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-07 16:03:05,723 - status_code_assertion - INFO - Response body is not empty.
+2024-10-07 16:03:05,723 - schema_assertion - INFO - Validating response JSON against 'team_general_schema.json'
+2024-10-07 16:03:05,723 - schema_assertion - INFO - Loaded schema: team_general_schema.json
+2024-10-07 16:03:05,729 - schema_assertion - INFO - JSON schema validation for 'team_general_schema.json' passed.
+2024-10-07 16:03:05,729 - content_assertion - INFO - Validating field 'id'. Expected: '67040639458df530c', Found: '67040639458df530c'.

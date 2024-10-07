@@ -1,0 +1,15 @@
+2024-10-07 16:02:26,593 - team_service - INFO - Starting the process to create a team.
+2024-10-07 16:02:26,593 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:02:26,593 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:02:26,593 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:02:26,593 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:02:26,593 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:02:26,593 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:02:26,593 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:02:26,593 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:02:26,593 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:02:26,593 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:02:26,951 - api_manager - INFO - Response Status Code: 400
+2024-10-07 16:02:26,951 - team_service - INFO - Finished processing the create team request.
+2024-10-07 16:02:26,952 - status_code_assertion - INFO - Validating status code 400 for response with URL: https://testing.espocloud.com/api/v1/Team
+2024-10-07 16:02:26,952 - status_code_assertion - INFO - Status code 400 validated successfully.
