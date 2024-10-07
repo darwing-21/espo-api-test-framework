@@ -1,0 +1,37 @@
+2024-10-07 15:55:53,018 - user_service - INFO - Starting the process to get the user list.
+2024-10-07 15:55:53,018 - auth_service - INFO - Initializing Auth class.
+2024-10-07 15:55:53,018 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 15:55:53,018 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 15:55:53,018 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 15:55:53,018 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 15:55:53,018 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 15:55:53,018 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 15:55:53,019 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 15:55:53,019 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 15:55:53,019 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/User?userType=internal&select=gender&maxSize=20&offset=0&orderBy=gender&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-07 15:55:53,331 - api_manager - INFO - Response Status Code: 200
+2024-10-07 15:55:53,331 - user_service - INFO - Finished processing the user list request.
+2024-10-07 15:55:53,331 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User?userType=internal&select=gender&maxSize=20&offset=0&orderBy=gender&order=asc
+2024-10-07 15:55:53,331 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-07 15:55:53,331 - status_code_assertion - INFO - Response body is not empty.
+2024-10-07 15:55:53,331 - schema_assertion - INFO - Validating response JSON against 'list_select_schema.json'
+2024-10-07 15:55:53,331 - schema_assertion - INFO - Loaded schema: list_select_schema.json
+2024-10-07 15:55:53,335 - schema_assertion - INFO - JSON schema validation for 'list_select_schema.json' passed.
+2024-10-07 15:55:53,335 - content_assertion - INFO - Validating 'list' is not empty. Found 7 items.
+2024-10-07 15:55:53,335 - content_assertion - INFO - Validating 'total' is greater than 0. Found: 7
+2024-10-07 15:55:53,336 - content_assertion - INFO - Validating list is ordered by 'gender' in ascending order.
+2024-10-07 15:55:53,336 - content_assertion - INFO - Values being validated: ['Male', 'Male', 'Female']
+2024-10-07 15:55:53,344 - user_hooks - INFO - Setting up for delete a user.
+2024-10-07 15:55:53,344 - user_service - INFO - Starting the process to delete a user.
+2024-10-07 15:55:53,344 - auth_service - INFO - Initializing Auth class.
+2024-10-07 15:55:53,344 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 15:55:53,344 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 15:55:53,344 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 15:55:53,344 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 15:55:53,344 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 15:55:53,344 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 15:55:53,344 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 15:55:53,344 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 15:55:53,344 - api_manager - INFO - DELETE Request URL: https://testing.espocloud.com/api/v1/User/670404869582fc470 | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 15:55:53,661 - api_manager - INFO - Response Status Code: 200
+2024-10-07 15:55:53,661 - user_service - INFO - Finished processing the delete user request.

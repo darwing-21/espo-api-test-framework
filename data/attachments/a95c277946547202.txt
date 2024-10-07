@@ -1,0 +1,15 @@
+2024-10-07 15:55:47,992 - user_service - INFO - Starting the process to view the user.
+2024-10-07 15:55:47,992 - auth_service - INFO - Initializing Auth class.
+2024-10-07 15:55:47,992 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 15:55:47,992 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 15:55:47,992 - auth_service - INFO - Building headers for user type: 'invalid_user'
+2024-10-07 15:55:47,993 - auth_service - INFO - Fetching user details for user type: 'invalid_user'
+2024-10-07 15:55:47,993 - auth_manager - INFO - Building headers for user: invalid
+2024-10-07 15:55:47,993 - auth_manager - INFO - Encoding credentials for user: invalid
+2024-10-07 15:55:47,993 - auth_manager - INFO - Headers build successfully for user: invalid
+2024-10-07 15:55:47,993 - auth_service - INFO - Headers successfully built for user type: 'invalid_user'
+2024-10-07 15:55:47,993 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/User/670404834ad41d4df | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-07 15:55:48,283 - api_manager - INFO - Response Status Code: 401
+2024-10-07 15:55:48,284 - user_service - INFO - Finished processing the user view request.
+2024-10-07 15:55:48,284 - status_code_assertion - INFO - Validating status code 401 for response with URL: https://testing.espocloud.com/api/v1/User/670404834ad41d4df
+2024-10-07 15:55:48,284 - status_code_assertion - INFO - Status code 401 validated successfully.

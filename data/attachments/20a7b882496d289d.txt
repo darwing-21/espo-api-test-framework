@@ -1,0 +1,23 @@
+2024-10-07 15:55:01,522 - team_service - INFO - Starting the process to get the team list.
+2024-10-07 15:55:01,522 - auth_service - INFO - Initializing Auth class.
+2024-10-07 15:55:01,522 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 15:55:01,522 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 15:55:01,522 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 15:55:01,522 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 15:55:01,522 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 15:55:01,522 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 15:55:01,522 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 15:55:01,523 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 15:55:01,523 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/Team?select=&maxSize=20&offset=0&orderBy=name&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-07 15:55:01,832 - api_manager - INFO - Response Status Code: 200
+2024-10-07 15:55:01,832 - team_service - INFO - Finished processing the team list request.
+2024-10-07 15:55:01,832 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/Team?select=&maxSize=20&offset=0&orderBy=name&order=asc
+2024-10-07 15:55:01,833 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-07 15:55:01,833 - status_code_assertion - INFO - Response body is not empty.
+2024-10-07 15:55:01,833 - schema_assertion - INFO - Validating response JSON against 'list_schema.json'
+2024-10-07 15:55:01,833 - schema_assertion - INFO - Loaded schema: list_schema.json
+2024-10-07 15:55:01,839 - schema_assertion - INFO - JSON schema validation for 'list_schema.json' passed.
+2024-10-07 15:55:01,839 - content_assertion - INFO - Validating 'list' is not empty. Found 3 items.
+2024-10-07 15:55:01,839 - content_assertion - INFO - Validating 'total' is greater than 0. Found: 3
+2024-10-07 15:55:01,839 - content_assertion - INFO - Validating each item in 'list' contains the field 'createdAt'.
+2024-10-07 15:55:01,839 - content_assertion - INFO - All items in 'list' contain the field 'createdAt'.
