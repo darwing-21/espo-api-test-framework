@@ -14,7 +14,7 @@ def test_list_users_with_internal_type_returns_200(setup_teardown_user):
     AssertionManager.assert_list_not_empty(response)
     AssertionManager.assert_total_greater_than_zero(response)
     AssertionManager.assert_field_value_in_response(response, "id", user['id'])
-    AssertionManager.assert_field_value_not_in_response(response, "id", "66d8f6a634904dc79")
+    AssertionManager.assert_field_value_not_in_response(response, "id", "6703f58e9acadd548")
 
 
 @pytest.mark.listuser
@@ -26,7 +26,7 @@ def test_list_users_with_api_type_returns_200(setup_teardown_user):
     AssertionManager.assert_list_user_schema_file(response)
     AssertionManager.assert_list_not_empty(response)
     AssertionManager.assert_total_greater_than_zero(response)
-    AssertionManager.assert_field_value_in_response(response, "id", "66d8f6a634904dc79")
+    AssertionManager.assert_field_value_in_response(response, "id", "6703f58e9acadd548")
     AssertionManager.assert_field_value_not_in_response(response, "id", user['id'])
 
 

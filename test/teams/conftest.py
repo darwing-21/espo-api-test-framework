@@ -41,7 +41,7 @@ def setup_teardown_team_module():
 @pytest.fixture(scope="module")
 def setup_teardown_user_team():
     team1 = before_create_team(generate_team_data())
-    users_ids = add_user_team_data(["52eb6b7c2a118", "53203b9428742"])
+    users_ids = add_user_team_data(["6703fcf23130e1ee5", "6703fd1db21326b8e"])
     before_add_user(team1.json()['id'], users_ids)
     yield team1.json()
     after_delete_team(team1.json()['id'])
@@ -50,7 +50,7 @@ def setup_teardown_user_team():
 @pytest.fixture(scope="function")
 def setup_teardown_user_team_function():
     team1 = before_create_team(generate_team_data())
-    users_ids = add_user_team_data(["52eb6b7c2a118", "53203b9428742"])
+    users_ids = add_user_team_data(["6703fcf23130e1ee5", "6703fd1db21326b8e"])
     before_add_user(team1.json()['id'], users_ids)
     yield team1.json()
     after_delete_team(team1.json()['id'])

@@ -151,39 +151,39 @@ def test_create_user_with_valid_default_team_id_returns_200(teardown_user, setup
 def test_create_user_with_valid_roles_ids_returns_200(teardown_user):
     created_teams = teardown_user
     url = EndpointUser.get_base_user()
-    data = create_user_data(roles_ids=["52bd3ee937361", "52bc41359084d"])
+    data = create_user_data(roles_ids=["6703f64ba26bb589d", "6703f804da5feb1b0"])
     AssertionManager.assert_create_user_schema_file(json.loads(data))
     response = UserService.create_user(url, data)
     created_teams.append(response.json())
     AssertionManager.assert_status_code_200(response)
     AssertionManager.assert_user_general_schema_file(response)
-    AssertionManager.assert_list_field_contains(response, "rolesIds", ["52bd3ee937361", "52bc41359084d"])
+    AssertionManager.assert_list_field_contains(response, "rolesIds", ["6703f64ba26bb589d", "6703f804da5feb1b0"])
 
 
 @pytest.mark.createuser
 def test_create_user_with_valid_working_time_calendar_id_returns_200(teardown_user):
     created_teams = teardown_user
     url = EndpointUser.get_base_user()
-    data = create_user_data(working_time_calendar_id="66d8f90b424428d1b")
+    data = create_user_data(working_time_calendar_id="6703f8ace83cd97ed")
     AssertionManager.assert_create_user_schema_file(json.loads(data))
     response = UserService.create_user(url, data)
     created_teams.append(response.json())
     AssertionManager.assert_status_code_200(response)
     AssertionManager.assert_user_general_schema_file(response)
-    AssertionManager.assert_field_value(response, "workingTimeCalendarId", "66d8f90b424428d1b")
+    AssertionManager.assert_field_value(response, "workingTimeCalendarId", "6703f8ace83cd97ed")
 
 
 @pytest.mark.createuser
 def test_create_user_with_valid_layout_set_id_returns_200(teardown_user):
     created_teams = teardown_user
     url = EndpointUser.get_base_user()
-    data = create_user_data(layout_set_id="66d8f8ff4f1c23bca")
+    data = create_user_data(layout_set_id="6703f89e1996ee098")
     AssertionManager.assert_create_user_schema_file(json.loads(data))
     response = UserService.create_user(url, data)
     created_teams.append(response.json())
     AssertionManager.assert_status_code_200(response)
     AssertionManager.assert_user_general_schema_file(response)
-    AssertionManager.assert_field_value(response, "layoutSetId", "66d8f8ff4f1c23bca")
+    AssertionManager.assert_field_value(response, "layoutSetId", "6703f89e1996ee098")
 
 
 @pytest.mark.createuser

@@ -176,14 +176,14 @@ def test_get_teams_unauthenticated_user_returns_http_401(setup_list_team):
     AssertionManager.assert_status_code_401(response)
 
 
-@pytest.mark.listteam
+@pytest.mark.listteam1
 def test_user_without_permissions_cannot_access_teams_module_returns_403(setup_list_team):
     url = EndpointTeams.get_list_team()
     response = TeamService.get_list_team(url, "no_team_access_user")
     AssertionManager.assert_status_code_403(response)
 
 
-@pytest.mark.listteam
+@pytest.mark.listteam1
 def test_get_teams_for_authenticated_user_returns_http_200(setup_list_team):
     url = EndpointTeams.get_list_team()
     response = TeamService.get_list_team(url, "self_teams_user")

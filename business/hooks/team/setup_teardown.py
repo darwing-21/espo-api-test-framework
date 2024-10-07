@@ -23,4 +23,5 @@ def before_add_user(id_team, data):
     logger.info("Setting up for add users a team.")
     url = EndpointTeams().get_team_user(id_team)
     response = TeamService.add_users_team(url, data)
+    print(response.json())
     return response

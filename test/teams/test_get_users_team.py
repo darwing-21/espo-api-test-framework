@@ -12,7 +12,7 @@ def test_list_users_of_team_with_valid_id_returns_200(setup_teardown_user_team):
     AssertionManager.assert_status_code_200(response)
     AssertionManager.assert_team_users_schema_file(response)
     AssertionManager.assert_field_value(response, "total", 2)
-    AssertionManager.assert_field_value_in_response(response, 'id', "52eb6b7c2a118")
+    AssertionManager.assert_field_value_in_response(response, 'id', "6703fcf23130e1ee5")
 
 
 @pytest.mark.listuserteam
