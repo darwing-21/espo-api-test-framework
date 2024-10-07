@@ -86,4 +86,4 @@ def test_order_by_valid_field_returns_200(setup_teardown_user):
     AssertionManager.assert_list_select_user_schema_file(response)
     AssertionManager.assert_list_not_empty(response)
     AssertionManager.assert_total_greater_than_zero(response)
-    AssertionManager.assert_list_order_ascending(response, "gender")
+    AssertionManager.assert_list_order_ascending(response, "gender" )
