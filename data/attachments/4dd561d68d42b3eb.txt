@@ -1,0 +1,17 @@
+2024-10-07 16:07:45,611 - schema_assertion - INFO - Loaded schema: create_team_schema.json
+2024-10-07 16:07:45,614 - schema_assertion - INFO - JSON schema validation for 'create_team_schema.json' passed.
+2024-10-07 16:07:45,614 - team_service - INFO - Starting the process to create a team.
+2024-10-07 16:07:45,614 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:07:45,614 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:07:45,614 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:07:45,615 - auth_service - INFO - Building headers for user type: 'invalid_user'
+2024-10-07 16:07:45,615 - auth_service - INFO - Fetching user details for user type: 'invalid_user'
+2024-10-07 16:07:45,615 - auth_manager - INFO - Building headers for user: invalid
+2024-10-07 16:07:45,615 - auth_manager - INFO - Encoding credentials for user: invalid
+2024-10-07 16:07:45,615 - auth_manager - INFO - Headers build successfully for user: invalid
+2024-10-07 16:07:45,615 - auth_service - INFO - Headers successfully built for user type: 'invalid_user'
+2024-10-07 16:07:45,615 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/Team | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:07:45,944 - api_manager - INFO - Response Status Code: 401
+2024-10-07 16:07:45,944 - team_service - INFO - Finished processing the create team request.
+2024-10-07 16:07:45,944 - status_code_assertion - INFO - Validating status code 401 for response with URL: https://testing.espocloud.com/api/v1/Team
+2024-10-07 16:07:45,944 - status_code_assertion - INFO - Status code 401 validated successfully.

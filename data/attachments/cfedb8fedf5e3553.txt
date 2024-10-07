@@ -1,0 +1,45 @@
+2024-10-07 16:08:08,276 - team_hooks - INFO - Setting up for adding a team.
+2024-10-07 16:08:08,277 - team_service - INFO - Starting the process to create a team.
+2024-10-07 16:08:08,277 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:08:08,277 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:08:08,277 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:08:08,277 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:08:08,277 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:08:08,277 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:08:08,277 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:08:08,277 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:08:08,277 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:08:08,277 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:08:08,608 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:08:08,608 - team_service - INFO - Finished processing the create team request.
+2024-10-07 16:08:08,609 - schema_assertion - INFO - Loaded schema: update_team_schema.json
+2024-10-07 16:08:08,618 - schema_assertion - INFO - JSON schema validation for 'update_team_schema.json' passed.
+2024-10-07 16:08:08,618 - team_service - INFO - Starting the process to update a team.
+2024-10-07 16:08:08,618 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:08:08,618 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:08:08,618 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:08:08,618 - auth_service - INFO - Building headers for user type: 'invalid_user'
+2024-10-07 16:08:08,618 - auth_service - INFO - Fetching user details for user type: 'invalid_user'
+2024-10-07 16:08:08,618 - auth_manager - INFO - Building headers for user: invalid
+2024-10-07 16:08:08,618 - auth_manager - INFO - Encoding credentials for user: invalid
+2024-10-07 16:08:08,618 - auth_manager - INFO - Headers build successfully for user: invalid
+2024-10-07 16:08:08,618 - auth_service - INFO - Headers successfully built for user type: 'invalid_user'
+2024-10-07 16:08:08,618 - api_manager - INFO - PUT Request URL: https://testing.espocloud.com/api/v1/Team/670407688a3f3e00b | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:08:08,911 - api_manager - INFO - Response Status Code: 401
+2024-10-07 16:08:08,911 - team_service - INFO - Finished processing the update team request.
+2024-10-07 16:08:08,911 - status_code_assertion - INFO - Validating status code 401 for response with URL: https://testing.espocloud.com/api/v1/Team/670407688a3f3e00b
+2024-10-07 16:08:08,912 - status_code_assertion - INFO - Status code 401 validated successfully.
+2024-10-07 16:08:08,912 - team_hooks - INFO - Setting up for delete a team.
+2024-10-07 16:08:08,913 - team_service - INFO - Starting the process to delete a team.
+2024-10-07 16:08:08,913 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:08:08,913 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:08:08,913 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:08:08,913 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:08:08,913 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:08:08,913 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:08:08,913 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:08:08,913 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:08:08,913 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:08:08,913 - api_manager - INFO - DELETE Request URL: https://testing.espocloud.com/api/v1/Team/670407688a3f3e00b | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:08:09,216 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:08:09,216 - team_service - INFO - Finished processing the delete team request.

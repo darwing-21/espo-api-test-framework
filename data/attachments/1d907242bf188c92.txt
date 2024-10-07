@@ -1,0 +1,36 @@
+2024-10-07 16:08:25,761 - schema_assertion - INFO - Loaded schema: create_user_schema.json
+2024-10-07 16:08:25,776 - schema_assertion - INFO - JSON schema validation for 'create_user_schema.json' passed.
+2024-10-07 16:08:25,776 - user_service - INFO - Starting the process to create a user.
+2024-10-07 16:08:25,776 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:08:25,776 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:08:25,776 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:08:25,776 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:08:25,776 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:08:25,776 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:08:25,776 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:08:25,776 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:08:25,776 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:08:25,776 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:08:26,115 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:08:26,115 - user_service - INFO - Finished processing the create user request.
+2024-10-07 16:08:26,115 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User
+2024-10-07 16:08:26,115 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-07 16:08:26,115 - status_code_assertion - INFO - Response body is not empty.
+2024-10-07 16:08:26,115 - schema_assertion - INFO - Validating response JSON against 'user_general_schema.json'
+2024-10-07 16:08:26,116 - schema_assertion - INFO - Loaded schema: user_general_schema.json
+2024-10-07 16:08:26,137 - schema_assertion - INFO - JSON schema validation for 'user_general_schema.json' passed.
+2024-10-07 16:08:26,138 - content_assertion - INFO - Validating field 'gender'. Expected: 'Female', Found: 'Female'.
+2024-10-07 16:08:26,138 - user_hooks - INFO - Setting up for delete a user.
+2024-10-07 16:08:26,138 - user_service - INFO - Starting the process to delete a user.
+2024-10-07 16:08:26,139 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:08:26,139 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:08:26,139 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:08:26,139 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:08:26,139 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:08:26,139 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:08:26,139 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:08:26,139 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:08:26,139 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:08:26,139 - api_manager - INFO - DELETE Request URL: https://testing.espocloud.com/api/v1/User/6704077a10c402809 | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-07 16:08:26,477 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:08:26,477 - user_service - INFO - Finished processing the delete user request.

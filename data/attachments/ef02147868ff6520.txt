@@ -1,0 +1,25 @@
+2024-10-07 16:08:18,620 - user_service - INFO - Starting the process to get the user list.
+2024-10-07 16:08:18,620 - auth_service - INFO - Initializing Auth class.
+2024-10-07 16:08:18,620 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-07 16:08:18,620 - auth_service - INFO - Auth class initialized successfully.
+2024-10-07 16:08:18,620 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-07 16:08:18,620 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-07 16:08:18,620 - auth_manager - INFO - Building headers for user: admin
+2024-10-07 16:08:18,620 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-07 16:08:18,621 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-07 16:08:18,621 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-07 16:08:18,621 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/User?userType=api&select=isActive%2CemailAddressIsOptedOut%2CemailAddressIsInvalid%2CemailAddress%2CemailAddressData%2Ctitle%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=20&offset=0&orderBy=userName&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-07 16:08:18,938 - api_manager - INFO - Response Status Code: 200
+2024-10-07 16:08:18,938 - user_service - INFO - Finished processing the user list request.
+2024-10-07 16:08:18,938 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User?userType=api&select=isActive%2CemailAddressIsOptedOut%2CemailAddressIsInvalid%2CemailAddress%2CemailAddressData%2Ctitle%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=20&offset=0&orderBy=userName&order=asc
+2024-10-07 16:08:18,938 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-07 16:08:18,938 - status_code_assertion - INFO - Response body is not empty.
+2024-10-07 16:08:18,938 - schema_assertion - INFO - Validating response JSON against 'list_schema.json'
+2024-10-07 16:08:18,939 - schema_assertion - INFO - Loaded schema: list_schema.json
+2024-10-07 16:08:18,945 - schema_assertion - INFO - JSON schema validation for 'list_schema.json' passed.
+2024-10-07 16:08:18,946 - content_assertion - INFO - Validating 'list' is not empty. Found 1 items.
+2024-10-07 16:08:18,946 - content_assertion - INFO - Validating 'total' is greater than 0. Found: 1
+2024-10-07 16:08:18,946 - content_assertion - INFO - Validating that the value '6703f58e9acadd548' is present in the field 'id' of the response list.
+2024-10-07 16:08:18,946 - content_assertion - INFO - Value '6703f58e9acadd548' successfully validated in the field 'id' of the response list.
+2024-10-07 16:08:18,946 - content_assertion - INFO - Validating that the value '670407723856ba69b' is NOT present in the field 'id' of the response list.
+2024-10-07 16:08:18,946 - content_assertion - INFO - Value '670407723856ba69b' is not present in the field 'id' of the response list, as expected.
