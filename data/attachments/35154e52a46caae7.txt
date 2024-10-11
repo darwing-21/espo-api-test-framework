@@ -1,0 +1,46 @@
+INFO     user_hooks:user_hooks.py:9 Setting up for adding a user.
+INFO     user_service:user_service.py:20 Starting the process to create a user.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:24 POST Request URL: https://testing.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:26 Response Status Code: 200
+INFO     api_manager:api_manager.py:27 Response: {"id":"670935a73fad5a812","name":"Philip Atkins","deleted":false,"userName":"theodorejohnson","type":"regular","authMethod":null,"salutationName":"Ms.","firstName":"Philip","lastName":"Atkins","isActive":true,"title":"Trade union research officer","emailAddress":"howellrachel@example.com","phoneNumber":"+5917339930","avatarColor":"#ef2b2b","gender":"Female","createdAt":"2024-10-11 14:26:47","modifiedAt":"2024-10-11 14:26:47","lastAccess":null,"targetListIsOptedOut":false,"emailAddressIsOptedOut":false,"emailAddressIsInvalid":false,"phoneNumberIsOptedOut":false,"phoneNumberIsInvalid":false,"emailAddressData":[{"emailAddress":"howellrachel@example.com","lower":"howellrachel@example.com","primary":true,"optOut":false,"invalid":false}],"phoneNumberData":[{"phoneNumber":"+5917339930","type":"Mobile","primary":true,"optOut":false,"invalid":false}],"defaultTeamId":"670935a67e288921d","defaultTeamName":"Team test adult","teamsIds":["670935a67e288921d"],"teamsNames":{"670935a67e288921d":"Team test adult"},"teamsColumns":{"670935a67e288921d":{"role":null}},"rolesIds":["6703f64ba26bb589d","6703f804da5feb1b0"],"rolesNames":{"6703f64ba26bb589d":"Administrador","6703f804da5feb1b0":"Mortal"},"portalsIds":[],"portalsNames":{},"portalRolesIds":[],"portalRolesNames":{},"contactName":null,"accountsIds":[],"accountsNames":{},"avatarId":null,"avatarName":null,"createdById":"6703f4f2dfe619515","createdByName":"Admin","dashboardTemplateName":null,"workingTimeCalendarId":"6703f8ace83cd97ed","workingTimeCalendarName":"calendar","layoutSetId":"6703f89e1996ee098","layoutSetName":"layaout"}
+INFO     user_service:user_service.py:24 Finished processing the create user request.
+INFO     user_service:user_service.py:29 Starting the process to delete a user.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'invalid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'invalid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: invalid
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: invalid
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: invalid
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'invalid_user'
+INFO     api_manager:api_manager.py:48 DELETE Request URL: https://testing.espocloud.com/api/v1/User/670935a73fad5a812 | {'Espo-Authorization': 'aW52YWxpZDppbnZhbGlk', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:50 Response Status Code: 401
+INFO     api_manager:api_manager.py:51 Response: 
+INFO     user_service:user_service.py:33 Finished processing the delete user request.
+INFO     status_code_assertion:status_code_assertion.py:47 Validating status code 401 for response with URL: https://testing.espocloud.com/api/v1/User/670935a73fad5a812
+INFO     status_code_assertion:status_code_assertion.py:52 Status code 401 validated successfully.
+INFO     user_hooks:user_hooks.py:16 Setting up for delete a user.
+INFO     user_service:user_service.py:29 Starting the process to delete a user.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:48 DELETE Request URL: https://testing.espocloud.com/api/v1/User/670935a73fad5a812 | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:50 Response Status Code: 200
+INFO     api_manager:api_manager.py:51 Response: true
+INFO     user_service:user_service.py:33 Finished processing the delete user request.

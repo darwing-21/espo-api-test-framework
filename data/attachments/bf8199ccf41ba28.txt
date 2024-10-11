@@ -1,0 +1,49 @@
+INFO     user_hooks:user_hooks.py:9 Setting up for adding a user.
+INFO     user_service:user_service.py:20 Starting the process to create a user.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:24 POST Request URL: https://testing.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:26 Response Status Code: 200
+INFO     api_manager:api_manager.py:27 Response: {"id":"670935a851c1845ea","name":"Nathan Black","deleted":false,"userName":"lford","type":"regular","authMethod":null,"salutationName":"Mrs.","firstName":"Nathan","lastName":"Black","isActive":true,"title":"Call centre manager","emailAddress":"troberson@example.org","phoneNumber":"+5917339930","avatarColor":"#ef2b2b","gender":"Male","createdAt":"2024-10-11 14:26:48","modifiedAt":"2024-10-11 14:26:48","lastAccess":null,"targetListIsOptedOut":false,"emailAddressIsOptedOut":false,"emailAddressIsInvalid":false,"phoneNumberIsOptedOut":false,"phoneNumberIsInvalid":false,"emailAddressData":[{"emailAddress":"troberson@example.org","lower":"troberson@example.org","primary":true,"optOut":false,"invalid":false}],"phoneNumberData":[{"phoneNumber":"+5917339930","type":"Mobile","primary":true,"optOut":false,"invalid":false}],"defaultTeamId":"670935a67e288921d","defaultTeamName":"Team test adult","teamsIds":["670935a67e288921d"],"teamsNames":{"670935a67e288921d":"Team test adult"},"teamsColumns":{"670935a67e288921d":{"role":null}},"rolesIds":["6703f64ba26bb589d","6703f804da5feb1b0"],"rolesNames":{"6703f64ba26bb589d":"Administrador","6703f804da5feb1b0":"Mortal"},"portalsIds":[],"portalsNames":{},"portalRolesIds":[],"portalRolesNames":{},"contactName":null,"accountsIds":[],"accountsNames":{},"avatarId":null,"avatarName":null,"createdById":"6703f4f2dfe619515","createdByName":"Admin","dashboardTemplateName":null,"workingTimeCalendarId":"6703f8ace83cd97ed","workingTimeCalendarName":"calendar","layoutSetId":"6703f89e1996ee098","layoutSetName":"layaout"}
+INFO     user_service:user_service.py:24 Finished processing the create user request.
+INFO     user_service:user_service.py:29 Starting the process to delete a user.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:48 DELETE Request URL: https://testing.espocloud.com/api/v1/User/670935a851c1845ea | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:50 Response Status Code: 200
+INFO     api_manager:api_manager.py:51 Response: true
+INFO     user_service:user_service.py:33 Finished processing the delete user request.
+INFO     status_code_assertion:status_code_assertion.py:9 Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User/670935a851c1845ea
+INFO     status_code_assertion:status_code_assertion.py:14 Status code 200 validated successfully.
+INFO     status_code_assertion:status_code_assertion.py:16 Response body is not empty.
+INFO     content_assertion:general_assertion.py:175 Validating that the response is true. Found: 'True'.
+INFO     user_service:user_service.py:29 Starting the process to delete a user.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:48 DELETE Request URL: https://testing.espocloud.com/api/v1/User/670935a851c1845ea | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:50 Response Status Code: 404
+INFO     api_manager:api_manager.py:51 Response: 
+INFO     user_service:user_service.py:33 Finished processing the delete user request.
+INFO     status_code_assertion:status_code_assertion.py:59 Validating status code 404 for response with URL: https://testing.espocloud.com/api/v1/User/670935a851c1845ea
+INFO     status_code_assertion:status_code_assertion.py:64 Status code 404 validated successfully.

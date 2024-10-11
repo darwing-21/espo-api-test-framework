@@ -1,0 +1,38 @@
+2024-10-11 14:26:53,595 - schema_assertion - INFO - Loaded schema: create_user_schema.json
+2024-10-11 14:26:53,609 - schema_assertion - INFO - JSON schema validation for 'create_user_schema.json' passed.
+2024-10-11 14:26:53,609 - user_service - INFO - Starting the process to create a user.
+2024-10-11 14:26:53,609 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:53,609 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:53,609 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:53,609 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:53,609 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:53,609 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:53,609 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:53,609 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:53,609 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:53,610 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/User | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-11 14:26:53,824 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:53,824 - api_manager - INFO - Response: {"id":"670935adc29462d4e","name":"Jason Johnathon Maximillian Alexanderson Christopher Davidson Benjamin Theodore Jameson Nathaniel Montgome","deleted":false,"userName":"brandon56","type":"regular","authMethod":null,"salutationName":"Mr.","firstName":"Jason","lastName":"Johnathon Maximillian Alexanderson Christopher Davidson Benjamin Theodore Jameson Nathaniel Montgome","isActive":false,"createdAt":"2024-10-11 14:26:53","modifiedAt":"2024-10-11 14:26:53","lastAccess":null,"targetListIsOptedOut":false,"emailAddressIsOptedOut":false,"emailAddressIsInvalid":false,"phoneNumberIsOptedOut":false,"phoneNumberIsInvalid":false,"emailAddressData":[],"phoneNumberData":[],"defaultTeamName":null,"teamsIds":[],"teamsNames":{},"teamsColumns":{},"rolesIds":[],"rolesNames":{},"portalsIds":[],"portalsNames":{},"portalRolesIds":[],"portalRolesNames":{},"contactName":null,"accountsIds":[],"accountsNames":{},"avatarId":null,"avatarName":null,"createdById":"6703f4f2dfe619515","createdByName":"Admin","dashboardTemplateName":null,"workingTimeCalendarName":null,"layoutSetName":null}
+2024-10-11 14:26:53,825 - user_service - INFO - Finished processing the create user request.
+2024-10-11 14:26:53,825 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User
+2024-10-11 14:26:53,825 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-11 14:26:53,825 - status_code_assertion - INFO - Response body is not empty.
+2024-10-11 14:26:53,825 - schema_assertion - INFO - Validating response JSON against 'user_general_schema.json'
+2024-10-11 14:26:53,825 - schema_assertion - INFO - Loaded schema: user_general_schema.json
+2024-10-11 14:26:53,846 - schema_assertion - INFO - JSON schema validation for 'user_general_schema.json' passed.
+2024-10-11 14:26:53,846 - content_assertion - INFO - Validating field 'lastName'. Expected: 'Johnathon Maximillian Alexanderson Christopher Davidson Benjamin Theodore Jameson Nathaniel Montgome', Found: 'Johnathon Maximillian Alexanderson Christopher Davidson Benjamin Theodore Jameson Nathaniel Montgome'.
+2024-10-11 14:26:53,847 - user_hooks - INFO - Setting up for delete a user.
+2024-10-11 14:26:53,847 - user_service - INFO - Starting the process to delete a user.
+2024-10-11 14:26:53,847 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:53,848 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:53,848 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:53,848 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:53,848 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:53,848 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:53,848 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:53,848 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:53,848 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:53,848 - api_manager - INFO - DELETE Request URL: https://testing.espocloud.com/api/v1/User/670935adc29462d4e | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-11 14:26:54,019 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:54,019 - api_manager - INFO - Response: true
+2024-10-11 14:26:54,019 - user_service - INFO - Finished processing the delete user request.

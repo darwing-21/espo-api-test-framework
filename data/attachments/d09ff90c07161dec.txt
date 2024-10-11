@@ -1,0 +1,39 @@
+INFO     team_hooks:setup_teardown.py:9 Setting up for adding a team.
+INFO     team_service:team_service.py:20 Starting the process to create a team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:24 POST Request URL: https://testing.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:26 Response Status Code: 200
+INFO     api_manager:api_manager.py:27 Response: {"id":"6709358fb98ad3ea0","name":"Team test tonight","deleted":false,"positionList":["Scrum Master","Dev","Designer"],"createdAt":"2024-10-11 14:26:23","modifiedAt":"2024-10-11 14:26:23","rolesIds":["6703f64ba26bb589d","6703f804da5feb1b0"],"rolesNames":{"6703f64ba26bb589d":"Administrador","6703f804da5feb1b0":"Mortal"},"layoutSetId":"6703f89e1996ee098","layoutSetName":"layaout","workingTimeCalendarId":"6703f8ace83cd97ed","workingTimeCalendarName":"calendar"}
+INFO     team_service:team_service.py:24 Finished processing the create team request.
+INFO     team_service:team_service.py:11 Starting the process to get the team list.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:12 GET Request URL: https://testing.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+INFO     api_manager:api_manager.py:14 Response Status Code: 200
+INFO     api_manager:api_manager.py:15 Response: {"total":4,"list":[{"id":"6703f6fab27dad429","name":"Team Dev"},{"id":"6703f6f3376e6dd38","name":"Team QA"},{"id":"6709327450c0cab45","name":"Team test expect"},{"id":"6709358fb98ad3ea0","name":"Team test tonight"}]}
+INFO     team_service:team_service.py:15 Finished processing the team list request.
+INFO     status_code_assertion:status_code_assertion.py:9 Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc
+INFO     status_code_assertion:status_code_assertion.py:14 Status code 200 validated successfully.
+INFO     status_code_assertion:status_code_assertion.py:16 Response body is not empty.
+INFO     schema_assertion:schema_assertion.py:41 Validating response JSON against 'list_select_schema.json'
+INFO     schema_assertion:schema_assertion.py:16 Loaded schema: list_select_schema.json
+INFO     schema_assertion:schema_assertion.py:26 JSON schema validation for 'list_select_schema.json' passed.
+INFO     content_assertion:general_assertion.py:24 Validating 'list' is not empty. Found 4 items.
+INFO     content_assertion:general_assertion.py:13 Validating 'total' is greater than 0. Found: 4
+INFO     content_assertion:general_assertion.py:35 Validating each item in 'list' contains the field 'name'.
+INFO     content_assertion:general_assertion.py:40 All items in 'list' contain the field 'name'.

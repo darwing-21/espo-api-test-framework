@@ -1,0 +1,24 @@
+2024-10-11 14:26:51,100 - user_service - INFO - Starting the process to get the user list.
+2024-10-11 14:26:51,100 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:51,100 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:51,100 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:51,100 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:51,100 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:51,100 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:51,100 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:51,100 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:51,100 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:51,101 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/User?userType=internal&select=gender&maxSize=20&offset=0&orderBy=userName&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-11 14:26:51,285 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:51,286 - api_manager - INFO - Response: {"total":8,"list":[{"id":"6703f4f2dfe619515","name":"admin","userName":"admin","type":"admin","isActive":true,"gender":null,"createdById":"system"},{"id":"6703fcf23130e1ee5","name":"chars","userName":"chars","type":"regular","isActive":true,"gender":"Male","createdById":"6703f4f2dfe619515"},{"id":"6703f7b97484ea32f","name":"dar_demo","userName":"dar_demo","type":"regular","isActive":true,"gender":"Male","createdById":"6703f4f2dfe619515"},{"id":"6709310008646052e","name":"kskinner","userName":"kskinner","type":"regular","isActive":false,"gender":null,"createdById":"6703f4f2dfe619515"},{"id":"670935aaa7ee618bd","name":"moorejoel","userName":"moorejoel","type":"regular","isActive":true,"gender":"Male","createdById":"6703f4f2dfe619515"},{"id":"6703f78a12b1743ed","name":"no_team_access_user","userName":"no_team_access_user","type":"regular","isActive":true,"gender":null,"createdById":"6703f4f2dfe619515"},{"id":"670402463994abcff","name":"no_users_access_user","userName":"no_users_access_user","type":"regular","isActive":true,"gender":null,"createdById":"6703f4f2dfe619515"},{"id":"67092c027866778af","name":"pepito","userName":"pepito","type":"regular","isActive":true,"gender":null,"createdById":"6703f4f2dfe619515"}]}
+2024-10-11 14:26:51,286 - user_service - INFO - Finished processing the user list request.
+2024-10-11 14:26:51,286 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/User?userType=internal&select=gender&maxSize=20&offset=0&orderBy=userName&order=asc
+2024-10-11 14:26:51,286 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-11 14:26:51,286 - status_code_assertion - INFO - Response body is not empty.
+2024-10-11 14:26:51,286 - schema_assertion - INFO - Validating response JSON against 'list_select_schema.json'
+2024-10-11 14:26:51,286 - schema_assertion - INFO - Loaded schema: list_select_schema.json
+2024-10-11 14:26:51,290 - schema_assertion - INFO - JSON schema validation for 'list_select_schema.json' passed.
+2024-10-11 14:26:51,290 - content_assertion - INFO - Validating 'list' is not empty. Found 8 items.
+2024-10-11 14:26:51,290 - content_assertion - INFO - Validating 'total' is greater than 0. Found: 8
+2024-10-11 14:26:51,290 - content_assertion - INFO - Validating each item in 'list' contains the field 'gender'.
+2024-10-11 14:26:51,290 - content_assertion - INFO - All items in 'list' contain the field 'gender'.

@@ -1,0 +1,53 @@
+2024-10-11 14:26:27,334 - team_hooks - INFO - Setting up for adding a team.
+2024-10-11 14:26:27,334 - team_service - INFO - Starting the process to create a team.
+2024-10-11 14:26:27,334 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:27,335 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:27,335 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:27,335 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:27,335 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:27,335 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:27,335 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:27,335 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:27,335 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:27,335 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-11 14:26:27,528 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:27,528 - api_manager - INFO - Response: {"id":"670935937b3c5bdc5","name":"Team test never","deleted":false,"positionList":["Product Owner","Dev","Scrum Master"],"createdAt":"2024-10-11 14:26:27","modifiedAt":"2024-10-11 14:26:27","rolesIds":["6703f64ba26bb589d","6703f804da5feb1b0"],"rolesNames":{"6703f64ba26bb589d":"Administrador","6703f804da5feb1b0":"Mortal"},"layoutSetId":"6703f89e1996ee098","layoutSetName":"layaout","workingTimeCalendarId":"6703f8ace83cd97ed","workingTimeCalendarName":"calendar"}
+2024-10-11 14:26:27,528 - team_service - INFO - Finished processing the create team request.
+2024-10-11 14:26:27,528 - team_hooks - INFO - Setting up for add users a team.
+2024-10-11 14:26:27,528 - team_service - INFO - Starting the process to add users to the team.
+2024-10-11 14:26:27,528 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:27,528 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:27,528 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:27,528 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:27,529 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:27,529 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:27,529 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:27,529 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:27,529 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:27,529 - api_manager - INFO - POST Request URL: https://testing.espocloud.com/api/v1/Team/670935937b3c5bdc5/users | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+2024-10-11 14:26:27,693 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:27,693 - api_manager - INFO - Response: true
+2024-10-11 14:26:27,694 - team_service - INFO - Finished processing the add users to team request.
+2024-10-11 14:26:27,695 - team_service - INFO - Starting the process to get the users of the team.
+2024-10-11 14:26:27,695 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:27,695 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:27,695 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:27,695 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:27,695 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:27,695 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:27,696 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:27,696 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:27,696 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:27,696 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/Team/670935937b3c5bdc5/users?primaryFilter=active&select=teamRole%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=5&offset=0&orderBy=userName&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-11 14:26:27,857 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:27,857 - api_manager - INFO - Response: {"total":2,"list":[{"id":"6703fcf23130e1ee5","name":"Charles Lopez","userName":"chars","type":"regular","salutationName":"Mr.","firstName":"Charles","lastName":"Lopez","isActive":true,"teamRole":null,"middleName":null,"createdById":"6703f4f2dfe619515"},{"id":"67092c027866778af","name":"Pepito Perez","userName":"pepito","type":"regular","salutationName":"Mr.","firstName":"Pepito","lastName":"Perez","isActive":true,"teamRole":null,"middleName":null,"createdById":"6703f4f2dfe619515"}]}
+2024-10-11 14:26:27,857 - team_service - INFO - Finished processing the users team list request.
+2024-10-11 14:26:27,857 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/Team/670935937b3c5bdc5/users?primaryFilter=active&select=teamRole%2CuserName%2CsalutationName%2CfirstName%2ClastName%2CmiddleName%2Cname&maxSize=5&offset=0&orderBy=userName&order=asc
+2024-10-11 14:26:27,857 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-11 14:26:27,858 - status_code_assertion - INFO - Response body is not empty.
+2024-10-11 14:26:27,858 - schema_assertion - INFO - Validating response JSON against 'team_users_schema.json'
+2024-10-11 14:26:27,858 - schema_assertion - INFO - Loaded schema: team_users_schema.json
+2024-10-11 14:26:27,861 - schema_assertion - INFO - JSON schema validation for 'team_users_schema.json' passed.
+2024-10-11 14:26:27,862 - content_assertion - INFO - Validating field 'total'. Expected: '2', Found: '2'.
+2024-10-11 14:26:27,862 - content_assertion - INFO - Validating that the value '6703fcf23130e1ee5' is present in the field 'id' of the response list.
+2024-10-11 14:26:27,862 - content_assertion - INFO - Value '6703fcf23130e1ee5' successfully validated in the field 'id' of the response list.

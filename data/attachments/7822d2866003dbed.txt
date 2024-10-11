@@ -1,0 +1,16 @@
+INFO     team_service:team_service.py:29 Starting the process to delete a team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:48 DELETE Request URL: https://testing.espocloud.com/api/v1/Team/invalid | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:50 Response Status Code: 404
+INFO     api_manager:api_manager.py:51 Response: 
+INFO     team_service:team_service.py:33 Finished processing the delete team request.
+INFO     status_code_assertion:status_code_assertion.py:59 Validating status code 404 for response with URL: https://testing.espocloud.com/api/v1/Team/invalid
+INFO     status_code_assertion:status_code_assertion.py:64 Status code 404 validated successfully.

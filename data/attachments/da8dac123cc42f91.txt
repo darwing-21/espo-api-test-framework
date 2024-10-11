@@ -1,0 +1,46 @@
+INFO     team_hooks:setup_teardown.py:9 Setting up for adding a team.
+INFO     team_service:team_service.py:20 Starting the process to create a team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:24 POST Request URL: https://testing.espocloud.com/api/v1/Team | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:26 Response Status Code: 200
+INFO     api_manager:api_manager.py:27 Response: {"id":"6709359c0d197ab9e","name":"Team test eat","deleted":false,"positionList":["Designer","Qa","Scrum Master"],"createdAt":"2024-10-11 14:26:36","modifiedAt":"2024-10-11 14:26:36","rolesIds":["6703f64ba26bb589d","6703f804da5feb1b0"],"rolesNames":{"6703f64ba26bb589d":"Administrador","6703f804da5feb1b0":"Mortal"},"layoutSetId":"6703f89e1996ee098","layoutSetName":"layaout","workingTimeCalendarId":"6703f8ace83cd97ed","workingTimeCalendarName":"calendar"}
+INFO     team_service:team_service.py:24 Finished processing the create team request.
+INFO     team_service:team_service.py:65 Starting the process to add users to the team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:24 POST Request URL: https://testing.espocloud.com/api/v1/Team/6709359c0d197ab9e/users | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:26 Response Status Code: 404
+INFO     api_manager:api_manager.py:27 Response: 
+INFO     team_service:team_service.py:69 Finished processing the add users to team request.
+INFO     status_code_assertion:status_code_assertion.py:59 Validating status code 404 for response with URL: https://testing.espocloud.com/api/v1/Team/6709359c0d197ab9e/users
+INFO     status_code_assertion:status_code_assertion.py:64 Status code 404 validated successfully.
+INFO     team_hooks:setup_teardown.py:16 Setting up for delete a team.
+INFO     team_service:team_service.py:29 Starting the process to delete a team.
+INFO     auth_service:authentification.py:10 Initializing Auth class.
+INFO     auth_service:authentification.py:17 Loading credential configuration from 'credentials.json'.
+INFO     auth_service:authentification.py:13 Auth class initialized successfully.
+INFO     auth_service:authentification.py:37 Building headers for user type: 'valid_user'
+INFO     auth_service:authentification.py:28 Fetching user details for user type: 'valid_user'
+INFO     auth_manager:auth_manager.py:18 Building headers for user: admin
+INFO     auth_manager:auth_manager.py:9 Encoding credentials for user: admin
+INFO     auth_manager:auth_manager.py:28 Headers build successfully for user: admin
+INFO     auth_service:authentification.py:47 Headers successfully built for user type: 'valid_user'
+INFO     api_manager:api_manager.py:48 DELETE Request URL: https://testing.espocloud.com/api/v1/Team/6709359c0d197ab9e | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef', 'Content-Type': 'application/json'}
+INFO     api_manager:api_manager.py:50 Response Status Code: 200
+INFO     api_manager:api_manager.py:51 Response: true
+INFO     team_service:team_service.py:33 Finished processing the delete team request.

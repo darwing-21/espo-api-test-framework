@@ -1,0 +1,24 @@
+2024-10-11 14:26:25,872 - team_service - INFO - Starting the process to get the team list.
+2024-10-11 14:26:25,872 - auth_service - INFO - Initializing Auth class.
+2024-10-11 14:26:25,872 - auth_service - INFO - Loading credential configuration from 'credentials.json'.
+2024-10-11 14:26:25,872 - auth_service - INFO - Auth class initialized successfully.
+2024-10-11 14:26:25,872 - auth_service - INFO - Building headers for user type: 'valid_user'
+2024-10-11 14:26:25,872 - auth_service - INFO - Fetching user details for user type: 'valid_user'
+2024-10-11 14:26:25,872 - auth_manager - INFO - Building headers for user: admin
+2024-10-11 14:26:25,872 - auth_manager - INFO - Encoding credentials for user: admin
+2024-10-11 14:26:25,872 - auth_manager - INFO - Headers build successfully for user: admin
+2024-10-11 14:26:25,872 - auth_service - INFO - Headers successfully built for user type: 'valid_user'
+2024-10-11 14:26:25,872 - api_manager - INFO - GET Request URL: https://testing.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc | {'Espo-Authorization': 'YWRtaW46NjI0MjkyNTU=', 'X-Api-Key': 'f542db99f09e823eeb14cd558f104fef'}
+2024-10-11 14:26:26,037 - api_manager - INFO - Response Status Code: 200
+2024-10-11 14:26:26,037 - api_manager - INFO - Response: {"total":4,"list":[{"id":"6703f6fab27dad429","name":"Team Dev"},{"id":"6703f6f3376e6dd38","name":"Team QA"},{"id":"6709327450c0cab45","name":"Team test expect"},{"id":"6709358fb98ad3ea0","name":"Team test tonight"}]}
+2024-10-11 14:26:26,037 - team_service - INFO - Finished processing the team list request.
+2024-10-11 14:26:26,038 - status_code_assertion - INFO - Validating status code 200 for response with URL: https://testing.espocloud.com/api/v1/Team?select=name&maxSize=20&offset=0&orderBy=name&order=asc
+2024-10-11 14:26:26,038 - status_code_assertion - INFO - Status code 200 validated successfully.
+2024-10-11 14:26:26,038 - status_code_assertion - INFO - Response body is not empty.
+2024-10-11 14:26:26,038 - schema_assertion - INFO - Validating response JSON against 'list_select_schema.json'
+2024-10-11 14:26:26,038 - schema_assertion - INFO - Loaded schema: list_select_schema.json
+2024-10-11 14:26:26,040 - schema_assertion - INFO - JSON schema validation for 'list_select_schema.json' passed.
+2024-10-11 14:26:26,040 - content_assertion - INFO - Validating 'list' is not empty. Found 4 items.
+2024-10-11 14:26:26,040 - content_assertion - INFO - Validating 'total' is greater than 0. Found: 4
+2024-10-11 14:26:26,040 - content_assertion - INFO - Validating list is ordered by 'name' in ascending order.
+2024-10-11 14:26:26,041 - content_assertion - INFO - Values being validated: ['Team Dev', 'Team QA', 'Team test expect', 'Team test tonight']
