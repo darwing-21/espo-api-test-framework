@@ -1,4 +1,4 @@
-from core.api.api_request import ApiManager
+from core.api.api_manager import ApiManager
 from core.tools.my_logger import setup_logger
 from business.services.authentification import Auth
 

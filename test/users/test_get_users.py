@@ -80,10 +80,10 @@ def test_negative_offset_returns_400(setup_teardown_user):
 
 @pytest.mark.listuser
 def test_order_by_valid_field_returns_200(setup_teardown_user):
-    url = EndpointUser.get_list_user(select="gender", orderBy="gender")
+    url = EndpointUser.get_list_user(select="name", orderBy="name")
     response = UserService.get_list_user(url)
     AssertionManager.assert_status_code_200(response)
     AssertionManager.assert_list_select_user_schema_file(response)
     AssertionManager.assert_list_not_empty(response)
     AssertionManager.assert_total_greater_than_zero(response)
-    AssertionManager.assert_list_order_ascending(response, "gender" )
+    AssertionManager.assert_list_order_ascending(response, "name")

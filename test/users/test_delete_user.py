@@ -4,7 +4,7 @@ from business.endpoints.enpoint_user import EndpointUser
 from business.tools.assertion_manager import AssertionManager
 
 
-@pytest.mark.deleteuser
+@pytest.mark.deleteuser1
 def test_delete_user_with_valid_id_returns_200(setup_user):
     user = setup_user
     url = EndpointUser.get_user_id(user['id'])

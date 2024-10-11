@@ -12,6 +12,7 @@ class ApiManager:
             logger.info(f"GET Request URL: {url} | {headers}")
             response = requests.get(url, headers=headers)
             logger.info(f"Response Status Code: {response.status_code}")
+            logger.info(f"Response: {response.text}")
             return response
         except requests.exceptions.RequestException as e:
             logger.error(f"GET Request failed: {e}")
@@ -23,6 +24,7 @@ class ApiManager:
             logger.info(f"POST Request URL: {url} | {headers}")
             response = requests.post(url, headers=headers, data=data)
             logger.info(f"Response Status Code: {response.status_code}")
+            logger.info(f"Response: {response.text}")
             return response
         except requests.exceptions.RequestException as e:
             logger.error(f"POST Request failed: {e}")
@@ -34,6 +36,7 @@ class ApiManager:
             logger.info(f"PUT Request URL: {url} | {headers}")
             response = requests.put(url, headers=headers, data=data)
             logger.info(f"Response Status Code: {response.status_code}")
+            logger.info(f"Response: {response.text}")
             return response
         except requests.exceptions.RequestException as e:
             logger.error(f"PUT Request failed: {e}")
@@ -45,6 +48,7 @@ class ApiManager:
             logger.info(f"DELETE Request URL: {url} | {headers}")
             response = requests.delete(url, headers=headers, data=data)
             logger.info(f"Response Status Code: {response.status_code}")
+            logger.info(f"Response: {response.text}")
             return response
         except requests.exceptions.RequestException as e:
             logger.error(f"DELETE Request failed: {e}")

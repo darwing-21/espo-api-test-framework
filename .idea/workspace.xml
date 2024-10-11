@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="009dd249-0e69-4d83-9101-81e817575a49" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/services/team_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/team_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/api/api_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/api/api_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/teams/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/teams/test_post_users_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teams/test_post_users_team.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/users/test_delete_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/users/test_delete_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/users/test_get_users.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/users/test_get_users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
